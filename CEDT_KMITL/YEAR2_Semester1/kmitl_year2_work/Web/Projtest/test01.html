@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Facebook Post Box Clone | CodingNepal</title>
+    <link rel="stylesheet" href="styles_test.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <section class="post">
+          <header>Create Post</header>
+          <form action="#">
+            <div class="content">
+              <div class="details">
+                <p>CodingNepal</p>
+              </div>
+            </div>
+            <textarea placeholder="What's on your mind, CodingNepal?" spellcheck="false" required></textarea>
+            <div class="options">
+              <p>Location </p>
+              <ul class="list">
+                asdadsad
+              </ul>
+            </div>
+            <div class="options">
+                <p>Upload IMG</p>
+                <ul class="list">
+                  <li>Click me!</li>
+                </ul>
+              </div>
+            <button>Post</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container"),
+      privacy = container.querySelector(".post .privacy"),
+      arrowBack = container.querySelector(".audience .arrow-back");
+
+      privacy.addEventListener("click", () => {
+        container.classList.add("active");
+      });
+
+      arrowBack.addEventListener("click", () => {
+        container.classList.remove("active");
+      });
+    </script>
+    
+  </body>
+</html>

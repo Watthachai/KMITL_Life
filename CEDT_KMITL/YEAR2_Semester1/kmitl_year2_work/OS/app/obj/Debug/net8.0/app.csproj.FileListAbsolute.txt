@@ -1,0 +1,15 @@
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\bin\Debug\net8.0\app.exe
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\bin\Debug\net8.0\app.deps.json
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\bin\Debug\net8.0\app.runtimeconfig.json
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\bin\Debug\net8.0\app.dll
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\bin\Debug\net8.0\app.pdb
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.AssemblyInfoInputs.cache
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.AssemblyInfo.cs
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.csproj.CoreCompileInputs.cache
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.sourcelink.json
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.dll
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\refint\app.dll
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.pdb
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\app.genruntimeconfig.cache
+c:\Users\watthachai\OneDrive\kmitl_year2_work\OS\app\obj\Debug\net8.0\ref\app.dll

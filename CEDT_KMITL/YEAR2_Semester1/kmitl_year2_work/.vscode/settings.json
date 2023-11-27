@@ -1,0 +1,4 @@
+{
+    "python.analysis.typeCheckingMode": "off",
+    "dotnet.defaultSolution": "OS/app/app.sln"
+}

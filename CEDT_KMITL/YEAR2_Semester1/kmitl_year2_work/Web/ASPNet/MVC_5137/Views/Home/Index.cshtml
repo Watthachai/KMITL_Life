@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form asp-controller="Home" asp-action="FormHandle" method="post">
+        <fieldset>
+            <legend><i>Contact Information</i></legend>
+            <label>First name: <input type="text" id="fname" name="fname"></label>
+            <br>
+            <label>Last name: <input type="text" id="lname" name="lname"></label>
+            <br>
+            <label>E-mail: <input type="email" id="email" name="email"></label>
+        </fieldset>
+
+        <fieldset>
+            <legend><i>Compettition Question</i></legend>
+            <label>How tall is the Eifel Tower in Paris, France?</label>
+            <br>
+            <input type="radio" id="q1" name="eifel_height" value="584">
+            <label>584ft</label>
+            <br>
+            <input type="radio" id="q2" name="eifel_height" value="784">
+            <label>784ft</label>
+            <br>
+            <input type="radio" id="q3" name="eifel_height" value="984">
+            <label>984ft</label>
+            <br>
+            <input type="radio" id="q4" name="eifel_height" value="1184">
+            <label>1184ft</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><i>Tiebreaker Question</i></legend>
+            <label>In 25 words or less, say why you would like to win $10,000:</label>
+            <br>
+            <textarea cols="40" rows="10" name="tiebreakerAnswer"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><i>Enter competition</i></legend>
+            <button type="submit">Enter Competition</button>
+        </fieldset>
+    </form>
+</body>

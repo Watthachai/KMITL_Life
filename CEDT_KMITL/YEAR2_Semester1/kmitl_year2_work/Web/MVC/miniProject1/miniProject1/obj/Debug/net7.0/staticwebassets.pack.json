@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\wattc\\OneDrive\\kmitl_year2_work\\Web\\MVC\\miniProject1\\miniProject1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\miniProject1.bundle.scp.css",
+      "PackagePath": "staticwebassets\\miniProject1.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\wattc\\OneDrive\\kmitl_year2_work\\Web\\MVC\\miniProject1\\miniProject1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\wattc\\OneDrive\\kmitl_year2_work\\Web\\MVC\\miniProject1\\miniProject1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\wattc\\OneDrive\\kmitl_year2_work\\Web\\MVC\\miniProject1\\miniProject1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.miniProject1.props",
+      "PackagePath": "build\\miniProject1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.miniProject1.props",
+      "PackagePath": "buildMultiTargeting\\miniProject1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.miniProject1.props",
+      "PackagePath": "buildTransitive\\miniProject1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.miniProject1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

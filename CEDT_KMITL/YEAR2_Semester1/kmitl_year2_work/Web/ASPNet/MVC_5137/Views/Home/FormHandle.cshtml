@@ -1,0 +1,33 @@
+﻿@page
+@model MVC_5137.Views.Home.FormHandleModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend><i>Contact Infomation</i></legend>
+        <form>
+            First name: @ViewBag.fname <br>
+            Last name: @ViewBag.lname <br>
+            E-mail: @ViewBag.email <br>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend><i>Competition Question</i></legend>
+        How tall is the Eiffel Tower in Paris, France? @ViewBag.eifel_height
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend><i>Tiebreaker Question</i></legend>
+        In 25 words or less, say why you would like to win $10,000: @ViewBag.tiebreakerAnswer
+        <br>
+    </fieldset>
+</body>
+</html>

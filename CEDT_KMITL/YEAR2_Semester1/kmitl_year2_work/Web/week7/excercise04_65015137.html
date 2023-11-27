@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="maincontainer"></div>
+        <script>
+          // Create header
+          var header = document.createElement("h1");
+          header.textContent = "Exercise 04: JavaScript&DOM";
+          maincontainer.appendChild(header);
+
+          var button = document.createElement("button");
+          button.textContent = "Click me to display date and Time";
+          button.style.marginTop = "0px"; // Add a bottom margin to the button
+
+          var worker = new Worker('worker.js');
+
+          // Flag to track whether the button has been clicked
+          var isClicked = false;
+
+          // Variables to save the last time text and color
+          var lastTimeText;
+          var lastTextColor;
+          var lastBGColor;
+
+          // Add an event listener to the button
+          button.addEventListener("click", function() {
+              if (!isClicked) {
+
+                  // Post a message to the worker
+                  worker.postMessage('getDate');
+
+                  // When the worker posts a message back
+                  worker.onmessage = function(event) {
+                      // Update the button text with the date from the worker
+                      button.textContent = event.data.time;
+                      // Update the button text color with the color from the worker
+                      button.style.backgroundColor = event.data.color;
+                      button.style.color = event.data.textcolor
+
+                      // Save the last time text and color
+                      lastTimeText = event.data.time;
+                      lastBGColor = event.data.color;
+                      lastTextColor = event.data.textcolor;
+                  };
+
+                  // Move the button to the top right of the screen
+                  button.style.position = "fixed";
+                  button.style.top = "0";
+                  button.style.right = "0";
+
+                  // Set the flag to true
+                  isClicked = true;
+              } else {
+
+                  worker.terminate();
+                  // Create a new worker for next time
+                  worker = new Worker('worker.js');
+
+                  // Reset the button text to the last time text and color to the last color
+                  button.textContent = lastTimeText;
+                  button.style.backgroundColor = lastBGColor;
+                  button.style.color = lastTextColor;
+
+                  // Move the button back to its original position
+                  button.style.position = "static";
+
+                  // Set the flag to false
+                  isClicked = false;
+              }
+          });
+
+          maincontainer.appendChild(button);
+
+          var lineBreak = document.createElement("br");
+          maincontainer.appendChild(lineBreak);
+          var lineBreak = document.createElement("br");
+          maincontainer.appendChild(lineBreak);
+          
+          // Create Personal Info header
+          var personalInfoHeader = document.createElement("a");
+          personalInfoHeader.href = ""
+          personalInfoHeader.textContent = "Personal Info";
+          personalInfoHeader.style.marginTop = "20px";
+          personalInfoHeader.style.color = "plum";
+          personalInfoHeader.addEventListener("mouseover", function() {
+            personalInfoHeader.style.color = "blue";
+            personalInfoHeader.style.backgroundColor = "yellow";
+          });
+          personalInfoHeader.addEventListener("mouseout", function() {
+            personalInfoHeader.style.color = "plum";
+            personalInfoHeader.style.backgroundColor = "";
+          });
+          maincontainer.appendChild(personalInfoHeader);
+
+          // Create Personal Info list
+          var personalInfo = document.createElement("ul");
+          personalInfo.style.display = "none"; // Hide the list initially
+          var infoItems = ["Watthachai Taechalue, ID: 65015137", "Subject: Web Dev", "Year 2 Semester 1"];
+          infoItems.forEach(function(item) {
+              var li = document.createElement("li");
+              li.textContent = item;
+              personalInfo.appendChild(li);
+          });
+          maincontainer.appendChild(personalInfo);
+
+          // Add click event to Personal Info header
+          personalInfoHeader.addEventListener("click", function(e) {
+              // Toggle display of the list on click
+              if (personalInfo.style.display === "none") {
+                  personalInfo.style.display = "block";
+              } else {
+                  personalInfo.style.display = "none";
+              }
+              e.preventDefault();
+          });
+
+          // Create Snapshots header
+          var snapshotsHeader = document.createElement("h2");
+          snapshotsHeader.textContent = "Snapshots";
+          maincontainer.appendChild(snapshotsHeader);
+
+          // Create Snapshots list
+          var snapshots = document.createElement("ul");
+          var snapshotItems = ["Doraemon", "Mountain", "Sea", "Galaxy"];
+          var snapshotImages = ["https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png", 
+                                "https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg", 
+                                "https://upload.wikimedia.org/wikipedia/commons/6/62/Paracas_National_Reserve%2C_Ica%2C_Peru-3April2011.jpg", 
+                                "https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg"];
+          var listItemRefs = []; // This will hold references to your list items
+          snapshotItems.forEach(function(item, index) {
+            var li = document.createElement("li");
+            var a = document.createElement("a"); // Create a new 'a' element
+            a.href = "#"; // Set the href attribute to "#" or any other URL
+            a.textContent = item;
+            a.addEventListener("click", function(e) {
+                e.preventDefault(); // Prevent the default action of the 'a' element
+                snap_img.src = snapshotImages[index];
+            });
+            li.appendChild(a); // Append the 'a' element to the 'li' element
+            snapshots.appendChild(li);
+          });
+          maincontainer.appendChild(snapshots);
+
+          // Define default_images here
+          var snap_img = document.createElement("img");
+          snap_img.src = "https://www.kmitl.ac.th/sites/default/files/styles/banner_slide/public/2023-06/Banner%20Happy%20University-01.png?itok=XDOK-saJ";
+          snap_img.style.width = "500px";
+          snap_img.style.height = "300px"
+          maincontainer.appendChild(snap_img);
+
+          var pic1 = listItemRefs[0];
+          pic1.addEventListener("click", function(e){
+            snap_img.src = "https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png";
+            e.preventDefault();
+          });
+
+          var pic2 = listItemRefs[1];
+          pic2.addEventListener("click", function(e){
+            snap_img.src = "https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg";
+            e.preventDefault();
+          });
+
+          var pic3 = listItemRefs[2];
+          pic3.addEventListener("click", function(e){
+            snap_img.src = "https://upload.wikimedia.org/wikipedia/commons/6/62/Paracas_National_Reserve%2C_Ica%2C_Peru-3April2011.jpg";
+            e.preventDefault();
+          });
+
+          var pic4 = listItemRefs[3];
+          pic4.addEventListener("click", function(e){
+            snap_img.src = "https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg";
+              e.preventDefault();
+          });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - miniProject1</title>
+    
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/miniProject1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+            <img src="https://engineer.kmitl.ac.th/wp-content/uploads/2019/03/logo06-300x270.png" alt="kmitl Logo" />
+            <div>
+                <h2>เว็บรับฝากซื้อของจากโรงอาหาร</h2>
+                <h4>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h4>
+            </div>
+    </header>
+    <div class="container">
+            @RenderBody()
+    </div>
+    @if (ViewContext.HttpContext.Request.Method == "POST")
+    {
+        <div id="tweets-container">
+            <div id="name-box">
+                <img src="https://engineer.kmitl.ac.th/wp-content/uploads/2019/03/logo06-300x270.png" alt="profile" />
+                <a id="info-profile">
+                    <h4>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h4>
+                    <p>Post @Model.PostDateTime.ToString("dd/MM/yy hh:mm tt")</p>
+                </a>
+            </div>
+            <div id="post">
+                <div id="post-box">
+                    <a>@Model.Posting</a>
+                </div>
+                <div id="addr-box">
+                    <p>ที่อยู่</p>
+                    <p>@Model.Address</p>
+                    <p>เบอร์</p>
+                    <p>@Model.PhoneNumber</p>
+                </div>
+                <div id="button-submit">
+                    <img src="https://pngimg.com/uploads/like/like_PNG39.png" style="width: 25px; height: 25px;">
+                    <button id="submit" style="width: auto; height: auto">ตอบรับ</button>
+                    <textarea id="input-comment" placeholder="Comment" style="width: 434px; height: 30px;"></textarea>
+                </div>
+            </div>
+        </div>
+    }
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@model List<miniProject.Models.Item>
+
+<h1>รายการสินค้า</h1>
+<table>
+    <tr>
+        <th>รหัส</th>
+        <th>ชื่อ</th>
+        <th>ราคา</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>

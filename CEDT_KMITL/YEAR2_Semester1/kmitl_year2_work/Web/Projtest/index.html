@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise </title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="controller.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <!--header -->
+            <header>
+                <img src="https://engineer.kmitl.ac.th/wp-content/uploads/2019/03/logo06-300x270.png" alt="kmitl Logo" />
+                <div>
+                    <h3>เว็บรับฝากซื้อของจากโรงอาหาร</h3>
+                    <h4>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h4>
+                </div>       
+            </header>
+
+            <fieldset>
+                <img src="https://engineer.kmitl.ac.th/wp-content/uploads/2019/03/logo06-300x270.png" alt="kmitl Logo" /><br>
+                <label>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</label><br>
+                <input type="text" id="postbox" name="post" placeholder="What's happening?" onclick="showPopup()">
+            </fieldset>
+            <div id="popup-container" class="container-popup" style="display: none;">
+                <div class="popup" id="postbox-popup">
+                        <section class="post">
+                          <header>สร้างโพสต์</header>
+                          <form action="#">
+                            <div class="content">
+                              <div class="details">
+                                <p></p>
+                              </div>
+                            </div>
+                            <textarea placeholder="What's on your mind?" spellcheck="false" required></textarea>
+                            <div class="options">
+                              <p>Location </p>
+                              <ul class="list">
+                                asdadsad
+                              </ul>
+                            </div>
+                            <div class="options">
+                                <p>Upload IMG</p>
+                                <ul class="list">
+                                  <li>Click me!</li>
+                                </ul>
+                              </div>
+                            <button>Post</button>
+                          </form>
+                        </section>
+
+                </div>
+            </div>
+
+        <div class="row">
+        <!--Body content -->
+            <div class="col-6">
+                <section>
+                    <label><b>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</b></label><br>
+                    <div id="post-head">
+                        <img src="https://engineer.kmitl.ac.th/wp-content/uploads/2019/03/logo06-300x270.png" alt="kmitl Logo" />
+                        <p>Post 15/10/66 12.07 pm </p>
+                    </div>
+                    <div id="post-address">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem repudiandae</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem repudiandae</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem repudiandae</p>
+                    </div>
+                    <br>
+                    <div id="post-comment">
+                        <img src="https://pngimg.com/uploads/like/like_PNG39.png" alt="like">
+                        <button id="submit">ตอบรับ</button>
+                        <input id="input-comment" placeholder="Comments" ></input>
+                    </div>
+                </section>
+            </div>
+            <br>
+            <div class="col-6">
+                <section>
+                    <label><b>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</b></label><br>
+                    <div id="post-head">
+                        <img src="https://engineer.kmitl.ac.th/wp-content/uploads/2019/03/logo06-300x270.png" alt="kmitl Logo" />
+                        <p>Post 15/10/66 12.07 pm </p>
+                    </div>
+                    <div id="post-address">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem repudiandae</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem repudiandae</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem repudiandae</p>
+                    </div>
+                    <br>
+                    <div id="post-comment">
+                        <img src="https://pngimg.com/uploads/like/like_PNG39.png" alt="like">
+                        <button id="submit">ตอบรับ</button>
+                        <input id="input-comment" placeholder="Comments" ></input>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        var popupContainer = document.getElementById("popup-container");
+        var postbox = document.getElementById("postbox");
+        var postboxPopup = document.getElementById("postbox-popup");
+    
+        function showPopup() {
+            postboxPopup.value = postbox.value;
+            popupContainer.style.display = "block";
+            // Add a click event listener to the document to close the popup when clicking outside
+            document.addEventListener("click", closePopupOnClickOutside);
+        }
+    
+        function closePopupOnClickOutside(event) {
+            if (event.target !== popupContainer && event.target !== postbox) {
+                // Click occurred outside of the popup and the input field
+                popupContainer.style.display = "none";
+                // Remove the click event listener from the document
+                document.removeEventListener("click", closePopupOnClickOutside);
+            }
+        }
+        
+        function focusNewInput() {
+            postboxPopup.focus();
+        }
+    </script>
+<!-- end Topic New -->
+</body>
+</html>

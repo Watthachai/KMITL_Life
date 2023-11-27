@@ -1,0 +1,22 @@
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+.rounded-x {
+    border-radius: 1rem!important;
+}
+
+.bg-body-tertiary {
+    --bs--bg-opacity: 1;
+    background-color: rgb(240, 240, 240);
+}
+
+hr {
+    margin-top: 3% !important;
+    margin-bottom: 3% !important;
+}
+
+.img-thumbnail {
+    padding: 0 !important;
+    
+}

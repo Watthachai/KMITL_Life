@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fg
+Version: 0.0.4
+Summary: Elastic Search access
+Home-page: https://github.com/thorwhalen/uu/tree/master/fg
+Author: Thor Whalen
+License: apache-2.0
+Platform: any
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# fg
+Elastic Search access
+
+
+To install:	```pip install fg```
+
+

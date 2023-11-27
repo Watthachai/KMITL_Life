@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+        <fieldset>
+            <h1>บริการรับฝากซื้ออาหาร!</h1>
+            <!-- <h3>ศูนย์รวมคนใจดี ช่วยหิ้วให้คุณ</h3> -->
+            <input type="text" id="myTxtbox" name="myTxtbox" placeholder="คุณต้องการฝากซื้ออะไร?">
+            <br>
+
+        </fieldset>
+
+       
+            <!-- โพสต์ข้อความฝากซื้อ -->
+            <div id="ModalCon" class="modal" style="overflow: auto;">
+                <div class="modal-contents">
+                  <p>ติดต่อทางจิต</p>
+                  <hr>
+                  <img src="https://cdn.pic.in.th/file/picinth/65015015---65015041---65015101---65015123---65015137---65015168--.png" alt="">
+                </div>
+              </div>
+       
+            <!-- โพสต์ข้อความฝากซื้อ -->
+            <div id="ModalPost" class="modal">
+                <div class="modal-content">
+                    <p>โพสต์ข้อความเพื่อทำการฝากซื้อ</p>
+                    <hr>
+            <form method="post" asp-controller="Home" asp-action="Index">
+                        <div class="form-group">
+                            <label for="name">ชื่อ :</label>
+                <input type="text" id="PostName" name="PostName" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">ที่อยู่ :</label>
+                <input type="text" id="PostAddress" name="PostAddress" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">เบอร์โทร :</label>
+                <input type="tel" id="PostPhone" name="PostPhone" required="required" minlength="10" pattern="[0-9]{10}">
+                        </div>
+                        <div class="form-group">
+                            <label for="details">รายละเอียด :</label>
+                <textarea id="PostDetail" name="PostDetail" required="required"></textarea>
+                        </div>
+                        <button>ยืนยัน</button>
+                    </form>
+                </div>
+            </div>
+           
+            <!-- ข้อความตอบรับ -->
+            <div id="ModalReply" class="modal">
+                <div class="modal-content">
+                    <p>โพสต์ข้อความตอบกลับ</p>
+                    <hr>
+            <form method="post" asp-controller="Home" asp-action="Comment">
+            <input type="hidden" id="Id" name="Id">
+                        <div class="form-group">
+                            <label for="name">ชื่อ :</label>
+                <input type="text" id="ReplyName" name="ReplyName" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">เบอร์โทร :</label>
+                <input type="text" id="ReplyPhone" name="ReplyPhone" required="required" minlength="10" pattern="[0-9]{10}">
+                        </div>
+                        <div class="form-group">
+                            <label for="details">รายละเอียด :</label>
+                <textarea id="ReplyDetail" name="ReplyDetail" required="required"></textarea>
+                        </div>
+                        <button id="btn-reply" name="btn-reply">ยืนยัน</button>
+            </form>
+                </div>
+            </div>
+
+
+
+            
+         
+   

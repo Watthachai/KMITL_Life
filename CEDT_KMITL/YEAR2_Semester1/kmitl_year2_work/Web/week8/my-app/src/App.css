@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+  min-height: 150vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-title {
+  color: rgb(255, 217, 0);
+  font-size: 3vh;
+  margin-top: 20px;
+}
+
+.box {
+  text-align: center;
+  border: 2px solid #000;
+  width: 800px;
+  background-color: #faf6c4;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding:40px 20px;
+  height: 260px;
+}
+
+.food-name {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.food-catagories {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #6c6d70;
+}
+
+.container-main{
+  background-color:rgb(246, 229, 209);
+  height: 37vh;
+  width: 770px;
+  border-radius: 20px;
+  margin-top: -0.5vh;
+  border: 3px solid;
+}
+.container-text-and-img{
+  display: flex;
+  float: right;
+}
+img{
+  padding: 4% 4% 10px 10px;
+  float: right;
+}
+.box-content{
+  text-align: start;
+  padding-left: 10px;
+}
+
+button{
+  size: 10px;
+  padding: 10px 20px;
+  margin: 2vh 50px;
+}
+
+.txtCount{
+  font-size: 20px;
+  font-weight: bold;
+  margin: -6.5vh 45% 100px 45%;
+  color: rgb(132, 67, 218);
+  background-color: rgb(122, 227, 0);
+  border-radius: 10px; 
+  padding: 10px; 
+  border: 3px solid rgb(132, 67, 218);
+}

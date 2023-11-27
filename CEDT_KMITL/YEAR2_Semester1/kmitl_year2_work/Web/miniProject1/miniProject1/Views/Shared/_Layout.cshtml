@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - miniProject1</title>
+    
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/miniProject1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://img.freepik.com/premium-vector/vector-image-bag-full-groceries-isolated-transparent-background_764382-3318.jpg" alt="Logo">
+            <h3>ฝากหน่อย</h3>
+        </div>
+        <button id="contactUs" name="contactUs">ติดต่อเรา</button>
+    </header>
+    <div class="container">
+            @RenderBody()
+    </div>
+    
+    @model List<DataModel>
+    @if (Model.Count != 0)
+    {       
+            @foreach (var item in Model)
+            {
+            <div class="row">
+        <!--Body content -->
+            <div class="col-6">
+                <section>
+                    <div id="post-head">
+                        <p>โพสต์เมื่อ @item.PostDateTime </p>
+                    </div>
+                    <div id="post-address">
+                        <p>ชื่อ : @item.Name</p>
+                        <p>ที่อยู่ : @item.Address</p>
+                        <p >เบอร์โทร : @item.PhoneNumber</p>
+                            <p>รายละเอียด : @item.Info </p>
+                            <p>สถานะ :
+                                @if (!item.ReplyStatus)
+                                {
+                                    <font style="color: orange; font-weight: bold;">รอดำเนินการ</font>
+                                }
+                                else
+                                {
+                                    <font style="color: green; font-weight: bold;">เสร็จสิ้น</font>
+                                }
+                            </p>
+                    </div>
+                    <br>
+                        @if (!item.ReplyStatus)
+                        {
+                            <div id="post-comment">
+                                <button class="btnConfirm" data-id="@item.Id">ตอบรับ</button>
+                            </div>
+                        }
+                        else
+                        {
+                            <!-- กล่องโพสตอบกลับ -->
+                            <div class="repost">
+                                <div id="repost-head">
+                                    <p>โพสต์เมื่อ @item.ReplyDateTime</p>
+                                </div>
+                                <div id="repost-address">
+                                    <p>ชื่อ : @item.ReplyName </p>
+                                    <p>เบอร์โทร :@item.ReplyPhone </p>
+                                    <p>รายละเอียด : @item.ReplyDetail</p>
+                                </div>
+                                <br>
+                            </div>
+                        }
+                    </section>
+            </div>
+            </div>
+        }
+    }
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
