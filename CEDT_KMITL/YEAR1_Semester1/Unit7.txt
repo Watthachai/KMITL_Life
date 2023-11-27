@@ -1,0 +1,112 @@
+Ex7.1
+subject_dict = {}
+
+def add_score(subject,score):
+  subject_dict[subject] = score
+
+def show_student_score():
+  for k,v in subject_dict.items() :
+    print(f"{k:11}:{v:6} ")
+
+def calc_average_score():
+  sum = 0
+  for k,v in subject_dict.items() :
+    sum += v
+  return sum/len(subject_dict)
+        
+add_score('python', 40)
+add_score('python', 50)
+add_score('calculus', 45)
+add_score('calculus', 55)
+
+show_student_score()
+print(calc_average_score())
+
+Ex7.2
+subject_dict = {}
+def add_score(student_id,subject,score):
+  if subject_dict.get(student_id) == None :
+    subject_dict[student_id] = {}
+  subject_dict[student_id][subject] = score
+
+def show_student_score(student_id):
+  if subject_dict.get(student_id) == None :
+    return print(f"Student id  {student_id}  not found.")
+  for k,v in subject_dict[student_id].items() :
+    print(f"{student_id} : {k:11}:{v:6} ")
+
+def calc_average_score(student_id):
+  if subject_dict.get(student_id) == None :
+    return 0
+  sum = 0
+  for k,v in subject_dict[student_id].items() :
+    sum += v
+  return sum/len(subject_dict[student_id])
+
+add_score('64015001', 'python', 40)
+add_score('64015001', 'calculus', 40)
+add_score('64015001', 'calculus', 50)
+#print(subject_dict)
+student_id = input("Enter student id:")
+show_student_score(student_id)
+print(calc_average_score(student_id))
+
+Ex7.3
+def build_score(filename):
+  prog_file = open(filename)
+  text_list = []
+  sub_val_list = []
+  text_dict = {}
+  for text in prog_file.readlines() :
+    n_text = text.replace('\n','')
+    text_list.append(n_text.split(','))
+  # print(text_list)
+    
+  for num in range(len(text_list)) :
+    subject_name = [text_list[num][2]]
+    values = [int(text_list[num][e]) for e in range(4,len(text_list[num])+1,2)]
+    #sum_number = [sum(values)]
+    sub_val = subject_name + values #+ sum_number
+    sub_val_list.append(sub_val)
+    
+  for num in range(0,len(text_list),2) :
+    if text_dict.get(text_list[num][0])==None :
+      text_dict[text_list[num][0]] = {}
+      text_dict[text_list[num][0]][text_list[num][1]] = [sub_val_list[num],sub_val_list[num+1]]
+  print(text_dict)
+  return text_dict
+    
+build_score('score.txt')
+
+Ex7.4
+def build_score(filename):
+  prog_file = open(filename)
+  text_list = []
+  sub_val_list = []
+  
+  for text in prog_file.readlines() :
+    n_text = text.replace('\n','')
+    text_list.append(n_text.split(','))
+  # print(text_list)
+    
+  for num in range(len(text_list)) :
+    subject_name = [text_list[num][2]]
+    values = [int(text_list[num][e]) for e in range(4,len(text_list[num])+1,2)]
+    sum_number = [sum(values)]
+    id = [text_list[num][0]]
+    name = [text_list[num][1]]
+    sub_val = id + name + subject_name + values + sum_number
+    sub_val_list.append(sub_val)
+    
+  '''  
+  for num in range(0,len(text_list),2) :
+    if text_dict.get(text_list[num][0])==None :
+      text_dict[text_list[num][0]] = {}
+      text_dict[text_list[num][0]][text_list[num][1]] = [sub_val_list[num],sub_val_list[num+1]]
+  print(text_dict)
+  '''
+  print(f' {"ID":^8}| {"Name":^8} | {"Subject":^8} |{"Test1":^7}|{"Test2":^7}|{"Test3":^7}|{"Test4":^7}| {"Sum.":^6}')
+  for text in range(len(sub_val_list)) :
+    print(f'{sub_val_list[text][0]:8} | {sub_val_list[text][1]:8} | {sub_val_list[text][2]:8} |{sub_val_list[text][3]:6} |{sub_val_list[text][4]:6} |{sub_val_list[text][5]:6} |{sub_val_list[text][6]:6} |{sub_val_list[text][7]:5}')
+    
+build_score('score.txt')

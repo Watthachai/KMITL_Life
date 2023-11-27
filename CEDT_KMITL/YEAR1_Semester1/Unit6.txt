@@ -1,0 +1,79 @@
+Ex6.1
+def test_pangram(s):
+  word = 'abcdefghijklmnopqrstuvwxyz'
+  for i in word :
+    if i not in s.lower() :
+      return False
+  return True
+
+Ex6.2
+def find_sum(n_list,n):
+  if n == 1 :
+    return n_list[n-1]
+  else :
+    return n_list[n-1] + find_sum(n_list,n-1)
+
+Ex6.3
+def count_char_in_string(x,s):
+  return [i.count(s) for i in x]
+
+Ex6.4
+def delete_minus(x):
+  return [[j for j in x[i] if j >= 0] for i in range(len(x))]
+
+Ex6.5
+def count_minus(str):
+  return len([int(e) for e in str.split() if int(e) < 0])
+
+Ex6.6
+def only_english(string1):
+  word = 'abcdefghijklmnopqrstuvwxyz'
+  return ''.join([e for e in string1 if e in word])
+
+Ex6.7
+def add2list(lst1, lst2):
+  return [lst1[i]+lst2[i] for i in range(len(lst1))]
+
+Unit6 Q 1
+def flatten_list(lst):
+  return sum(lst,[])
+
+Unit6 Q 2
+def remove_duplicate(s):
+  return list(set(s))
+
+Unit6 Q 3
+def common_member(lst1, lst2):
+  return [i for i in set(lst1) if i in set(lst2)]
+
+Unit6 Q 4
+def vowel_cut(str):
+  word = 'aeiou'
+  return ''.join([e for e in str if e not in word]).replace('_',' ')
+
+Unit6 Q 5
+def minus_all(lst):
+  return [lst[i] + lst[-1] for i in range(len(lst)-1)]
+
+Unit6 Q 6
+def less_than_5(str):
+  return ' '.join([e for e in str.split() if len(e) <= 5])
+
+Unit6 Q 7
+def find_rank(s_score, stu_id):
+  s_score.sort(key=lambda row:(row[1]),reverse=True)
+  return sum([i+1 for i in range(len(s_score)) if stu_id in s_score[i]])
+print(find_rank([ ['65015001', 87.25], ['65015002', 77.00],['65015003', 82.50], ['65015004', 69.75],    ['65015005', 66.00]  ],'65015004'))
+
+Unit6 Q 8
+def more_than_half(n_list):
+  import math
+  count = sum([i for i in set(n_list) if n_list.count(i) > math.floor(len(n_list)/2)])
+  return count if count > math.floor(len(n_list)/2) else 'Not found'
+
+Unit6 Q 9
+def string_reverse(str):
+  if len(str) == 0 :
+    return str
+  else :
+    return string_reverse(str[1:]) + str[0].lower()

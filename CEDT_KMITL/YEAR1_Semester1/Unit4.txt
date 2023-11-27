@@ -1,0 +1,169 @@
+Ex 4.1
+value = True
+i = 1
+while value :
+  if i%1==0 and i%2==0 and i%3==0 and i%4==0 and i%5==0 and i%6==0 and i%7==0 and i%8==0 and i%9==0 and i%10==0 and i%11==0 and i%12==0 and i%13==0 and i%14==0 and i%15==0 :
+    print(i)
+    value = False
+  i += 1
+
+Ex 4.2
+prime_number = []
+for i in range(2,1001):
+  prime = True
+  for j in range(2,i):
+    if i%j==0 :
+      prime=False
+      break 
+  if prime :
+    prime_number.append(i)
+print(prime_number[101])
+
+Unit4 Q 1
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+lst_string = []
+number = int(input("Enter : "))
+for i in range(len(lst)):
+  for j in range(len(lst)):
+    if lst[i] != lst[j] and lst[i]!=0 and lst[j]!=0:
+      if lst[i] + lst[j] == number :
+        lst_string.append(f"[{lst[i]},{lst[j]}]")
+        lst[i] = 0
+        lst[j] = 0
+print(*lst_string,sep="")
+
+Unit4 Q 2
+number_in = input("Enter : ").split()
+zero_count = number_in.count('0')
+number = [int(e) for e in number_in if e != '0']
+number_min =min(number)
+number.sort()
+i = 0
+while True :
+  if number[i] != number_min :
+    for s in range(zero_count) :
+      number.insert(i,0)
+    break
+  i+=1
+print(*number,sep="")
+
+Unit4 Q 3
+num_str = "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"
+sum = 0
+for i in range(0,len(num_str)-4):
+  multiply = int(num_str[i]) * int(num_str[i+1]) * int(num_str[i+2]) * int(num_str[i+3])
+  if multiply > sum:
+    sum = multiply
+print(sum)
+
+Unit4 Q 4
+for i in range(900,1001):
+  for j in range(900,1001):
+    sum = i*j
+    sum_string = str(sum)[::-1]
+    if str(sum) == sum_string :
+      answer = sum
+print(answer)
+
+Unit4 Q 5
+symbol = input('Enter : ') 
+parenthesis_left = symbol.count('(')
+parenthesis_right = symbol.count(')')
+square_left = symbol.count('[')
+square_right = symbol.count(']')
+curly_left = symbol.count('{')
+curly_right = symbol.count('}')
+if parenthesis_left == parenthesis_right and square_left == square_right and curly_left == curly_right :
+  print(True)
+else :
+  print(False)
+
+Unit4 Q 6
+number = (input("Enter : "))
+count_minus = number.count('-')
+number_delete_symbol_minus = [e for e in number if e != '-']
+while True:
+  if number_delete_symbol_minus[-1] == '0':
+    number_delete_symbol_minus.pop(-1)
+  else:
+    break
+if count_minus == 1:
+  number_delete_symbol_minus.insert(len(number_delete_symbol_minus),'-')
+print(*number_delete_symbol_minus[::-1],sep="")
+
+Unit4 Q 7
+number = int(input("Enter : "))
+length = (number*2)+1
+for row in range(length):
+  for column in range(length):
+    if row == 0 or row == length-1 or column == 0 or column == length-1:
+      print(0,end="")
+    elif column >= row and (length-1)-column >= row:
+      print(row,end="")
+    elif column > number and row <= number:
+      print((length-1)-column,end="")
+    elif row > number and (length-1)-row <= column and (length-1)-column >= (length-1)-row:
+      print((length-1)-row,end="")
+    elif row > number and (length-1)-column <= (length-1)-row and column > number :
+      print((length-1)-column,end="")
+    else :
+      print(column,end="")
+  print()
+
+Unit4 Q 8
+number = int(input("Enter : "))
+length = (number * 2) + 1
+for row in range(length):
+    count = 0
+    num_count = -1
+    for column in range(length):
+        if column - row <= number and row + column >= number and row - column <= number and row + column <= 3 * number:
+          if row <= number:
+            if count < row+1:
+                count += 1
+                num_count += 1
+                print(num_count, end="")
+            else:
+                num_count -= 1
+                print(num_count, end="")
+          else :
+            if count < (length-1)-row+1:
+                count += 1
+                num_count += 1
+                print(num_count, end="")
+            else:
+                num_count -= 1
+                print(num_count, end="")
+        else:
+            print(' ', end="")
+    print()
+
+Unit4 Q 9
+x = 1
+air = ' '
+air2 = ' '
+y=0
+y2=0
+num = int(input('num: '))
+x1 = 1
+y = num*2
+for i in range(1,num+1):
+    y -=1
+    air = air*y
+    dot = '*'
+    dot = dot*x
+    print(f'{air}{dot}')
+    x += 2
+    air = ' '
+y2 = num*2-1
+for i in range(1,num+1):
+    y -=1
+    air = air*y
+    air2 = air2*y2
+    dot = '*'
+    dot = dot*x1
+    print(f'{air}{dot}{air2}{dot}')
+    y2 -=2
+    x1 +=2
+    air = ' '
+    air2 = ' '

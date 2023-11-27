@@ -1,0 +1,281 @@
+Ex5.1
+day_in_month = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+
+def is_leap(year):
+  return True if((year % 400 == 0) or (year % 100 != 0) and (year % 4 == 0)) else False
+
+def day_of_year(day, month, year):
+  sum_month = 0
+  if is_leap(year) and month > 2:
+    for i in range(1,month):
+      sum_month += day_in_month[i]
+    return day+sum_month+1
+  else :
+    for i in range(1,month):
+      sum_month += day_in_month[i]
+    return day+sum_month
+
+Ex5.2
+day_in_month = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+
+def is_leap(year):
+  return True if((year % 400 == 0) or (year % 100 != 0) and (year % 4 == 0)) else False
+
+def day_of_year(day, month, year):
+  sum_month = 0
+  if is_leap(year) and month > 2:
+    for i in range(1,month):
+      sum_month += day_in_month[i]
+    return day+sum_month+1
+  else :
+    for i in range(1,month):
+      sum_month += day_in_month[i]
+    return day+sum_month
+    
+def day_in_year(year):
+    return 366 if is_leap(year) else 365
+
+def date_diff(date1, date2):
+  date1_list = [int(e) for e in date1.split('-')]
+  date2_list = [int(e) for e in date2.split('-')]
+  sum = 0
+  if date1_list[0] == date2_list[0] and date1_list[1] == date2_list[1] and date1_list[2] < date2_list[2]:
+    for i in range(date1_list[2],date2_list[2]):
+      sum += day_in_year(i)
+    return sum + 1
+  elif date1_list[2] == date2_list[2] and date1_list[1] <= date2_list[1]:
+    return day_of_year(date2_list[0],date2_list[1],date2_list[2]) - day_of_year(date1_list[0],date1_list[1],date1_list[2]) + 1
+  elif date1_list[2] < date2_list[2] :
+    for i in range(date1_list[2]+1,date2_list[2]):
+      sum += day_in_year(i)
+    return day_in_year(date1_list[2])-day_of_year(date1_list[0],date1_list[1],date1_list[2])+1 + day_of_year(date2_list[0],date2_list[1],date2_list[2]) + sum
+  else :
+    return False
+
+Ex5.3
+day_in_month = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+
+def is_leap(year):
+  return True if((year % 400 == 0) or (year % 100 != 0) and (year % 4 == 0)) else False
+
+def day_of_year(day, month, year):
+  sum_month = 0
+  if is_leap(year) and month > 2:
+    for i in range(1,month):
+      sum_month += day_in_month[i]
+    return day+sum_month+1
+  else :
+    for i in range(1,month):
+      sum_month += day_in_month[i]
+    return day+sum_month
+    
+def day_in_year(year):
+    return 366 if is_leap(year) else 365
+
+def date_diff(date1, date2):
+  date1_list = [int(e) for e in date1.split('-')]
+  date2_list = [int(e) for e in date2.split('-')]
+  sum = 0
+  if date1_list[1] > 12 or date2_list[1] > 12 :
+    return -1
+  if is_leap(date1_list[2]) :
+    if date1_list[1] == 2 :
+      if date1_list[0] > day_in_month[date1_list[1]] + 1 :
+        return -1
+    else :
+      if date1_list[0] > day_in_month[date1_list[1]] :
+        return -1
+  else :
+    if date1_list[0] > day_in_month[date1_list[1]] :
+      return -1
+  if is_leap(date2_list[2]) :
+    if date2_list[1] == 2 :
+      if date2_list[0] > day_in_month[date2_list[1]] + 1 :
+        return -1
+    else :
+      if date2_list[0] > day_in_month[date2_list[1]] :
+        return -1
+  else :
+    if date2_list[0] > day_in_month[date2_list[1]] :
+      return -1
+  if date1_list[0] == date2_list[0] and date1_list[1] == date2_list[1] and date1_list[2] < date2_list[2]:
+    for i in range(date1_list[2],date2_list[2]):
+      sum += day_in_year(i)
+    return sum + 1
+  elif date1_list[2] == date2_list[2] and date1_list[1] <= date2_list[1]:
+    return day_of_year(date2_list[0],date2_list[1],date2_list[2]) - day_of_year(date1_list[0],date1_list[1],date1_list[2]) + 1
+  elif date1_list[2] < date2_list[2] :
+    for i in range(date1_list[2]+1,date2_list[2]):
+      sum += day_in_year(i)
+    return day_in_year(date1_list[2])-day_of_year(date1_list[0],date1_list[1],date1_list[2])+1 + day_of_year(date2_list[0],date2_list[1],date2_list[2]) + sum
+  else :
+    return -1
+
+Unit5 Q 1
+def find_mismatch(str1, str2):
+  count = 0
+  new_str1 = list(str1.lower())
+  new_str2 = list(str2.lower())
+  if new_str1 == new_str2 :
+    return 0
+  elif len(new_str1) <= len(new_str2) :
+    for str in new_str1:
+      if str in new_str2:
+        index_str = new_str2.index(str)
+        count += 1
+        new_str2[index_str] = '0'
+    return 1 if len(new_str2) - count == 1 else 2
+  elif len(new_str1) > len(new_str2) :
+    for str in new_str2:
+      if str in new_str1:
+        index_str = new_str1.index(str)
+        count += 1
+        new_str1[index_str] = '0'
+    return 1 if len(new_str1) - count == 1 else 2
+
+Unit5 Q 2
+def find_mismatch(str1, str2):
+  count = 0
+  new_str1 = list(str1.lower())
+  new_str2 = list(str2.lower())
+  if new_str1 == new_str2 :
+    return str1
+  elif len(new_str1) <= len(new_str2) :
+    for str in new_str1:
+      if str in new_str2:
+        index_str = new_str2.index(str)
+        count += 1
+        new_str2[index_str] = '0'
+    return str2 if len(new_str2) - count == 1 else str1
+  elif len(new_str1) > len(new_str2) :
+    for str in new_str2:
+      if str in new_str1:
+        index_str = new_str1.index(str)
+        count += 1
+        new_str1[index_str] = '0'
+    return str2 if len(new_str1) - count == 1 else str1
+
+
+def spelling_correction(str, lst):
+    str_list = [s for s in str.split()]
+    new_str_list = []
+    for row in range(len(str_list)):
+        correct = False
+        for column in range(len(lst)):
+            if find_mismatch(str_list[row], lst[column]) == lst[column]:
+                correct = True
+                new_str_list.append(lst[column].lower())
+                break
+        if not correct:
+            new_str_list.append(str_list[row].lower())
+    return ' '.join(new_str_list)
+
+Unit5 Q 3
+def find_word_horizontal(crosswords,word):
+  word_list = [e for e in word]
+  for row in range(len(crosswords)):
+    count = 0
+    for column in range(len(crosswords[row])-len(word_list)+1):
+      if word_list[count] == crosswords[row][column]:
+        col_count = column
+        while count < len(word_list)-1:
+          count += 1
+          col_count += 1
+          if word_list[count] == crosswords[row][col_count]:
+            sum = [row,column]
+          else :
+            sum = None
+            break
+    if count == len(word_list)-1 and sum != None:
+      break
+  return sum
+
+Unit5 Q 4
+def find_word_vertical(crosswords,word):
+  word_list = [e for e in word]
+  for row in range(len(crosswords)-len(word_list)+1):
+    for column in range(len(crosswords[row])):
+      count = 0
+      if word_list[count] == crosswords[row][column]:
+        col_row = row
+        while count < len(word_list)-1:
+          count += 1
+          col_row += 1
+          if word_list[count] == crosswords[col_row][column]:
+            sum = [row,column]
+          else :
+            sum = None
+      if count == len(word_list)-1 and sum != None:
+        break
+  return sum
+
+Unit5 Q 5
+crosswords = [['s', 'd', 'o', 'g'], ['c', 'u', 'c', 'm'], ['a', 'c', 'a', 't'],
+              ['t', 'e', 't', 'k']]
+word = 'cat'
+
+
+def find_word_horizontal(crosswords, word):
+    import copy
+    crosswords_horizontal = copy.deepcopy(crosswords)
+    word_list = [e for e in word]
+    for row in range(len(crosswords_horizontal)):
+        count = 0
+        for column in range(
+                len(crosswords_horizontal[row]) - len(word_list) + 1):
+            if word_list[count] == crosswords_horizontal[row][column]:
+                col_count = column
+                while count < len(word_list) - 1:
+                    count += 1
+                    col_count += 1
+                    if word_list[count] == crosswords_horizontal[row][
+                            col_count]:
+                        sum = [row, column]
+                    else:
+                        sum = None
+                        break
+        if count == len(word_list) - 1 and sum != None:
+            index_sum1, index_sum2 = sum
+            for i in range(len(word_list)):
+                crosswords_horizontal[index_sum1][index_sum2 +
+                                                  i] = word_list[i].upper()
+            break
+    return crosswords_horizontal
+
+
+def find_word_vertical(crosswords, word):
+    import copy
+    crosswords_vertical = copy.deepcopy(crosswords)
+    word_list = [e for e in word]
+    for row in range(len(crosswords_vertical) - len(word_list) + 1):
+        for column in range(len(crosswords_vertical[row])):
+            count = 0
+            if word_list[count] == crosswords_vertical[row][column]:
+                col_row = row
+                while count < len(word_list) - 1:
+                    count += 1
+                    col_row += 1
+                    if word_list[count] == crosswords_vertical[col_row][
+                            column]:
+                        sum = [row, column]
+                    else:
+                        sum = None
+            if count == len(word_list) - 1 and sum != None:
+                index_sum1, index_sum2 = sum
+                for i in range(len(word)):
+                    crosswords_vertical[index_sum1 +
+                                        i][index_sum2] = word_list[i].upper()
+                break
+    return crosswords_vertical
+
+
+def capitalize_word_in_crossword(crosswords, word):
+    if find_word_horizontal(crosswords, word) != crosswords:
+        return find_word_horizontal(crosswords, word)
+    elif find_word_vertical(crosswords, word) != crosswords:
+        return find_word_vertical(crosswords, word)
+    else:
+        return crosswords
+
+
+print(capitalize_word_in_crossword(crosswords, word))
