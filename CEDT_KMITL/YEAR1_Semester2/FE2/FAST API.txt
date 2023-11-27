@@ -1,0 +1,3 @@
+FAST API
+Axios = ดึงข้อมูล
+React FrontEnd

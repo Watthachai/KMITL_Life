@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML101</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+        div #navbar, ul, li {
+            background-color: #000;
+            color: #4b1414;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 5em; padding-left: 2em">อยากดรอปแล้วครับ</h1>
+    </header>
+    <div id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.onscroll = () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar');
+            } else {
+                navbar.classList.remove('navbar');
+            }
+        }
+
+        window.onblur = () => {
+            document.title = 'Come back';
+        }
+    </script>
+</body>
+</html>
