@@ -349,3 +349,804 @@ arm-none-eabi-size  Lab01.elf
    6280	     20	   1572	   7872	   1ec0	Lab01.elf
 Finished building: default.size.stdout
  
+13:28:16 **** Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:139:1: error: expected identifier or '(' before '}' token
+  139 | }
+      | ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:29:39 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6384	     20	   1572	   7976	   1f28	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+13:30:39 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6384	     20	   1572	   7976	   1f28	Lab01.elf
+Finished building: default.size.stdout
+ 
+13:31:49 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6384	     20	   1572	   7976	   1f28	Lab01.elf
+Finished building: default.size.stdout
+ 
+13:51:39 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:37: warning: implicit declaration of function 'GPIO_PIN'; did you mean 'GPIO_PIN_4'? [-Wimplicit-function-declaration]
+  112 |         if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN(led)) == GPIO_PIN_SET)
+      |                                     ^~~~~~~~
+      |                                     GPIO_PIN_4
+../Core/Src/main.c:213:1: error: expected declaration or statement at end of input
+  213 | }
+      | ^
+At top level:
+../Core/Src/main.c:204:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  204 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:146:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  146 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:52:57 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:185:1: error: expected declaration or statement at end of input
+  185 | }
+      | ^
+At top level:
+../Core/Src/main.c:176:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  176 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:118:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  118 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:53:53 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6432	     20	   1572	   8024	   1f58	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:02:25 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6340	     20	   1572	   7932	   1efc	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:07:27 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6336	     20	   1572	   7928	   1ef8	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:07:35 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6336	     20	   1572	   7928	   1ef8	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:13:43 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:7: error: 'led' undeclared (first use in this function)
+  113 |       led++;
+      |       ^~~
+../Core/Src/main.c:113:7: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:120:32: warning: implicit declaration of function 'GPIO_PIN'; did you mean 'GPIO_PIN_4'? [-Wimplicit-function-declaration]
+  120 |       HAL_GPIO_WritePin(GPIOD, GPIO_PIN(led), GPIO_PIN_SET);
+      |                                ^~~~~~~~
+      |                                GPIO_PIN_4
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:14:42 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:32: warning: implicit declaration of function 'GPIO_PIN'; did you mean 'GPIO_PIN_4'? [-Wimplicit-function-declaration]
+  120 |       HAL_GPIO_WritePin(GPIOD, GPIO_PIN(led), GPIO_PIN_SET);
+      |                                ^~~~~~~~
+      |                                GPIO_PIN_4
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+D:/KMITL_Life/CEDT_KMITL/YEAR2_Semester2/01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT/01076051 MICROCONTROLLER PROJECT/Lab01/Debug/../Core/Src/main.c:120: undefined reference to `GPIO_PIN'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: Lab01.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:15:27 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+arm-none-eabi-size: Lab01.elf: file format not recognized
+make: *** [makefile:69: default.size.stdout] Error 3
+make: *** Waiting for unfinished jobs....
+arm-none-eabi-objdump: Lab01.elf: file format not recognized
+make: *** [makefile:74: Lab01.list] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:17:05 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6168	     20	   1572	   7760	   1e50	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:18:43 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6344	     20	   1572	   7936	   1f00	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:18:50 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6344	     20	   1572	   7936	   1f00	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:19:07 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6344	     20	   1572	   7936	   1f00	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:23:15 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6464	     20	   1572	   8056	   1f78	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:23:22 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6464	     20	   1572	   8056	   1f78	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:23:29 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6464	     20	   1572	   8056	   1f78	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:38:56 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6528	     20	   1572	   8120	   1fb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:39:05 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6528	     20	   1572	   8120	   1fb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:39:39 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6528	     20	   1572	   8120	   1fb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:39:47 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6528	     20	   1572	   8120	   1fb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:41:37 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6528	     20	   1572	   8120	   1fb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:44:55 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:46:1: error: unknown type name 'u_int8_t'; did you mean 'uint8_t'?
+   46 | u_int8_t sw01 = 0;
+      | ^~~~~~~~
+      | uint8_t
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:45:07 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6548	     20	   1572	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:45:15 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6548	     20	   1572	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:46:22 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6548	     20	   1572	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:46:33 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6548	     20	   1572	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:48:03 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6548	     20	   1572	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:48:05 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6548	     20	   1572	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:49:01 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6548	     24	   1568	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:49:06 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6548	     24	   1568	   8140	   1fcc	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:49:41 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:49:48 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:50:06 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:51:49 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:152:1: error: expected identifier or '(' before '}' token
+  152 | }
+      | ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:52:17 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:219:1: error: expected declaration or statement at end of input
+  219 | }
+      | ^
+At top level:
+../Core/Src/main.c:210:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  210 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:152:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  152 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:52:31 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:52:43 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:54:27 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:55:58 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:56:08 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:56:13 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6536	     20	   1572	   8128	   1fc0	Lab01.elf
+Finished building: default.size.stdout
+ 
+14:59:29 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:25: error: 'sw' undeclared (first use in this function); did you mean 'sw01'?
+  102 |                         sw = !sw;
+      |                         ^~
+      |                         sw01
+../Core/Src/main.c:102:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:59:38 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6552	     20	   1572	   8144	   1fd0	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+14:59:44 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6552	     20	   1572	   8144	   1fd0	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:04:32 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6552	     20	   1572	   8144	   1fd0	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:04:36 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6552	     20	   1572	   8144	   1fd0	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:04:49 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6552	     20	   1572	   8144	   1fd0	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:11:01 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6460	     20	   1572	   8052	   1f74	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:11:07 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6460	     20	   1572	   8052	   1f74	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:12:14 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6456	     20	   1572	   8048	   1f70	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:12:22 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6456	     20	   1572	   8048	   1f70	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:12:24 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6456	     20	   1572	   8048	   1f70	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:13:51 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6456	     20	   1572	   8048	   1f70	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:13:55 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6456	     20	   1572	   8048	   1f70	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:16:58 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6680	     20	   1572	   8272	   2050	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:17:04 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6680	     20	   1572	   8272	   2050	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:21:15 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:32: warning: implicit declaration of function 'GPIO_PIN'; did you mean 'GPIO_PIN_4'? [-Wimplicit-function-declaration]
+  101 |       HAL_GPIO_WritePin(GPIOD, GPIO_PIN(current_led), GPIO_PIN_SET);
+      |                                ^~~~~~~~
+      |                                GPIO_PIN_4
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+D:/KMITL_Life/CEDT_KMITL/YEAR2_Semester2/01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT/01076051 MICROCONTROLLER PROJECT/Lab01/Debug/../Core/Src/main.c:101: undefined reference to `GPIO_PIN'
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/KMITL_Life/CEDT_KMITL/YEAR2_Semester2/01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT/01076051 MICROCONTROLLER PROJECT/Lab01/Debug/../Core/Src/main.c:115: undefined reference to `GPIO_PIN'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: Lab01.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:28:11 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6512	     28	   1572	   8112	   1fb0	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:28:15 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6512	     28	   1572	   8112	   1fb0	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:35:56 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6524	     20	   1572	   8116	   1fb4	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:36:03 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6524	     20	   1572	   8116	   1fb4	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:37:33 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:127:1: error: expected identifier or '(' before '}' token
+  127 | }
+      | ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:37:45 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:127:1: error: expected identifier or '(' before '}' token
+  127 | }
+      | ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:37:59 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:127:1: error: expected identifier or '(' before '}' token
+  127 | }
+      | ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:38:46 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6336	     20	   1572	   7928	   1ef8	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:38:51 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6336	     20	   1572	   7928	   1ef8	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:46:55 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6272	     20	   1572	   7864	   1eb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:47:00 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6272	     20	   1572	   7864	   1eb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+15:48:25 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:29: error: 'GPIOPG' undeclared (first use in this function); did you mean 'GPIOG'?
+  101 |           HAL_GPIO_WritePin(GPIOPG, GPIO_PIN_9, GPIO_PIN_SET);
+      |                             ^~~~~~
+      |                             GPIOG
+../Core/Src/main.c:101:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:48:41 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:29: error: 'GPIOPG' undeclared (first use in this function); did you mean 'GPIOG'?
+  101 |           HAL_GPIO_WritePin(GPIOPG, GPIO_PIN_9, GPIO_PIN_SET);
+      |                             ^~~~~~
+      |                             GPIOG
+../Core/Src/main.c:101:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:48:49 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab01.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\Lab01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab01.elf
+ 
+arm-none-eabi-size  Lab01.elf 
+arm-none-eabi-objdump -h -S Lab01.elf  > "Lab01.list"
+   text	   data	    bss	    dec	    hex	filename
+   6272	     20	   1572	   7864	   1eb8	Lab01.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab01.list
+ 
+15:48:55 **** Incremental Build of configuration Debug for project Lab01 ****
+make -j16 all 
+arm-none-eabi-size  Lab01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6272	     20	   1572	   7864	   1eb8	Lab01.elf
+Finished building: default.size.stdout
+ 
