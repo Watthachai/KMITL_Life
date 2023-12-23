@@ -1,452 +1,48 @@
-!SESSION 2023-12-09 10:39:00.097 -----------------------------------------------
+!SESSION 2023-12-19 16:29:56.369 -----------------------------------------------
 eclipse.buildId=Version 1.14.0
 java.version=17.0.8.1
 java.vendor=Eclipse Adoptium
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-09 10:40:50.597
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-19 16:30:27.208
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-09 10:40:50.603
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-19 16:30:27.216
 !MESSAGE Log4j2 initialized with config file D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\.metadata\.log4j2.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-09 10:41:01.186
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-19 16:30:31.980
 !MESSAGE Started RMI Server, listening on port 41337
-!SESSION 2023-12-10 12:46:29.256 -----------------------------------------------
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-19 16:31:27.910
+!MESSAGE Indexed 'Lab02' (20 sources, 82 headers) in 3.12 sec: 5,652 declarations; 30,919 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0055%)
+!SESSION 2023-12-19 20:32:51.906 -----------------------------------------------
 eclipse.buildId=Version 1.14.0
 java.version=17.0.8.1
 java.vendor=Eclipse Adoptium
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-10 12:46:56.387
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-19 20:33:13.652
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-10 12:46:56.397
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-19 20:33:13.662
 !MESSAGE Log4j2 initialized with config file D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\.metadata\.log4j2.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-10 12:47:07.813
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-19 20:33:21.871
 !MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.cdt.core 1 0 2023-12-10 12:49:33.807
-!MESSAGE Indexed 'Lab01' (20 sources, 82 headers) in 6.11 sec: 5,652 declarations; 30,919 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0055%)
-!SESSION 2023-12-10 14:09:13.637 -----------------------------------------------
+!SESSION 2023-12-23 12:20:41.493 -----------------------------------------------
 eclipse.buildId=Version 1.14.0
 java.version=17.0.8.1
 java.vendor=Eclipse Adoptium
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY org.eclipse.core.resources 2 10035 2023-12-10 14:09:17.580
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-10 14:09:30.395
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-23 12:20:58.569
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-10 14:09:30.403
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-23 12:20:58.577
 !MESSAGE Log4j2 initialized with config file D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\.metadata\.log4j2.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-10 14:10:06.252
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-23 12:21:06.649
 !MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 14:46:24.676
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 14:48:03.188
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 14:51:25.160
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 14:53:06.975
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 14:56:19.693
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:02:20.175
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:02:45.059
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-10 15:06:20.442
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-10 15:06:54.509
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-10 15:08:02.264
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:31:13.815
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:34:19.336
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:35:30.050
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:37:53.106
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2023-12-10 15:41:00.379
-!MESSAGE Request for monitor: 'RequestMonitor (com.st.stm32cube.ide.mcu.debug.swv.core.ui.StartTraceHandler$1@6f198b5d): Status ERROR: org.eclipse.cdt.dsf code=10004  children=[Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
-ptype led0
-Error message from debugger back end:
-No symbol "led0" in current context. java.lang.Exception: No symbol "led0" in current context.]' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-12-10 15:41:00.380
-!MESSAGE Failed to execute MI command:
-ptype led0
-Error message from debugger back end:
-No symbol "led0" in current context.
-!STACK 0
-java.lang.Exception: No symbol "led0" in current context.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 4 4 2023-12-10 15:41:00.381
-!MESSAGE StartTraceHandler, configuration failure: true
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:43:52.815
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-10 15:45:09.410
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 15:46:09.084
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-10 15:47:43.306
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-10 15:48:30.717
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-10 16:01:09.515
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.core.jobs 2 2 2023-12-10 16:15:05.464
-!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
-!SESSION 2023-12-12 13:38:10.533 -----------------------------------------------
-eclipse.buildId=Version 1.14.0
-java.version=17.0.8.1
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-12 13:38:24.401
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-12 13:38:24.407
-!MESSAGE Log4j2 initialized with config file D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\.metadata\.log4j2.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-12 13:38:36.844
-!MESSAGE Started RMI Server, listening on port 41337
-!SESSION 2023-12-18 12:39:07.624 -----------------------------------------------
-eclipse.buildId=Version 1.14.0
-java.version=17.0.8.1
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-18 12:39:26.073
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-18 12:39:26.080
-!MESSAGE Log4j2 initialized with config file D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\01076051 MICROCONTROLLER PROJECT\.metadata\.log4j2.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-18 12:39:41.253
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 13:29:50.899
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-18 13:31:34.572
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 13:31:56.644
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-18 13:32:45.419
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-18 13:40:19.468
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-12-18 13:40:51.080
-!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "containers" is null
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
-	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:07:43.075
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-12-18 14:15:31.821
-!MESSAGE Error in final launch sequence:
-
-Failed to execute MI command:
--file-exec-file "D:\\KMITL_Life\\CEDT_KMITL\\YEAR2_Semester2\\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\\01076051 MICROCONTROLLER PROJECT\\Lab01\\Debug\\Lab01.elf"
-Error message from debugger back end:
-"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\b76050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\b76051 MICROCONTROLLER PROJECT\Lab01\Debug\Lab01.elf": not in executable format: file format not recognized
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--file-exec-file "D:\\KMITL_Life\\CEDT_KMITL\\YEAR2_Semester2\\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\\01076051 MICROCONTROLLER PROJECT\\Lab01\\Debug\\Lab01.elf"
-Error message from debugger back end:
-"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\b76050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\b76051 MICROCONTROLLER PROJECT\Lab01\Debug\Lab01.elf": not in executable format: file format not recognized
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
-	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:334)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1038)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1241)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.lang.Exception: "D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\b76050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\b76051 MICROCONTROLLER PROJECT\Lab01\Debug\Lab01.elf": not in executable format: file format not recognized
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-12-18 14:15:31.821
-!MESSAGE Failed to execute MI command:
--file-exec-file "D:\\KMITL_Life\\CEDT_KMITL\\YEAR2_Semester2\\01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\\01076051 MICROCONTROLLER PROJECT\\Lab01\\Debug\\Lab01.elf"
-Error message from debugger back end:
-"D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\b76050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\b76051 MICROCONTROLLER PROJECT\Lab01\Debug\Lab01.elf": not in executable format: file format not recognized
-!STACK 0
-java.lang.Exception: "D:\KMITL_Life\CEDT_KMITL\YEAR2_Semester2\b76050 MICROCONTROLLER APPLICATION AND DEVELOPMENT\b76051 MICROCONTROLLER PROJECT\Lab01\Debug\Lab01.elf": not in executable format: file format not recognized
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:17:13.382
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:18:57.955
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:19:14.566
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:23:37.117
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:39:13.353
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:39:54.684
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:41:45.167
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:45:22.642
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:46:40.905
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:48:13.260
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:49:14.276
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:49:56.312
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:50:13.578
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:52:51.118
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:54:34.957
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:56:20.424
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 14:59:52.234
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:04:44.228
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:04:57.305
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:11:14.645
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:12:31.930
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:14:03.080
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:17:12.217
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:28:23.540
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:36:10.712
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:38:59.425
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:47:08.152
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-12-18 15:49:02.960
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
