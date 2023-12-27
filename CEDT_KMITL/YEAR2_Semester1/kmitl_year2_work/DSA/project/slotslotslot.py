@@ -233,6 +233,10 @@ if __name__ == '__main__':
     time.sleep(1)
     clear()
     
+""" 
+
+? C lang maybe from OS?
+
     int child_pid = fork();
     if (child_pid == 0) {
         // Child process
@@ -242,4 +246,4 @@ if __name__ == '__main__':
         // Parent process
         printf("Parent process\n", child_pid());
         return 0;
-    }
+    }"""
