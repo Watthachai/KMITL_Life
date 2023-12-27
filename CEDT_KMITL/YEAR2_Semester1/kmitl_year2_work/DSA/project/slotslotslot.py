@@ -50,6 +50,11 @@ class Cash:
             print('\n\t     Not enough credit to place a bet press "a" to add money!')
             time.sleep(1)
             return True
+        
+class MegabitCash:
+    def __init__(self, credit = 20000, bet = 80):
+        self.credit = credit
+        
 
 class SlotMachine:
     def __init__(self, slot_one, slot_two, slot_three):
@@ -111,7 +116,7 @@ class SlotMachine:
             symbol = result[0][0]
             multiplier = result[0][1]
             win_amount = cash.bet * multiplier  # Calculate win amount based on bet and multiplier
-            print(f"\t|     Congratulations! You won ${win_amount}!        | |")
+            print(f"\t|     Congratulations! You won ${win_amount}!        | /")
             cash.credit += win_amount
             self.loss_count = 0  # Reset the loss counter after a win
         else:
@@ -129,7 +134,7 @@ orange = ("🍊", 8)
 seven = ("💎", 15)
 
 # Define the probabilities for each symbol
-probabilities = [13, 8, 6, 4, 3, 0.5]
+probabilities = [10, 6, 5, 3, 2, 0.5]
 symbols = [strawberry, plum, raspberry, orange, banana, seven]
 slot_one = random.choices(symbols, weights=probabilities, k=100)
 
