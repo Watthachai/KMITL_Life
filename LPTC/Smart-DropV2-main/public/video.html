@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>ส่งของ | Smart Drop</title>
+</head>
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  * {
+      box-sizing: border-box;
+      font-family: 'Kanit', sans-serif !important;
+    }body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #e0e0e0;
+      overflow: hidden;
+      font-size: 14px;
+      font-family: 'Kanit', sans-serif !important;
+    }
+    .center {
+      position: relative;
+      top: 50%;
+      left: 48%;
+      display: inline-block;
+      width: 355px;
+      height: 680px;
+      border-radius: 15px;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      background-image: linear-gradient(to top right, #fdbb76, #f0dca7);
+    }
+    @media screen and (max-height: 500px) {
+      .center {
+        transition: transform 0.5s;
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+    }
+    .main {
+      width: 800px;
+      margin: 160px auto;
+      text-align: center;
+    }
+    
+    h1,
+    h2,
+    h3 {
+      color: rgb(36, 36, 36);
+    }
+    
+    h1 {
+      margin-bottom: 30px;
+      font-size: 44px;
+    }
+    
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    
+    h3 {
+      font-size: 21px;
+    }
+    
+    p {
+      font-size: 18px;
+      color: #293554;
+    }
+    
+    .btn {
+      margin: 30px 5px;
+      padding: 2.2% 5.5%;
+      display: inline-block;
+      -webkit-transition: all linear 0.15s;
+      transition: all linear 0.15s;
+      border-radius: 10px;
+      background-color: #2e773a !important;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+    }
+
+    .backbtn {
+        margin-top: 30px;
+      display: inline-block;
+      -webkit-transition: all linear 0.15s;
+      transition: all linear 0.15s;
+      border-radius: 10px;
+      background-color: #435469 !important;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+    }
+    .btn:hover {
+      opacity: 0.75;
+      color: #000000;
+    }
+    
+    .popup-wrap {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      content: "";
+      background: rgba(0, 0, 0, 0.85);
+    }
+    
+    .popup-box {
+      width: 400px;
+      padding: 70px;
+      transform: translate(-50%, -50%) scale(0.5);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      background: #fff;
+      text-align: center;
+    }
+    .popup-box h2 {
+      color: #1a1a1a;
+    }
+    .popup-box h3 {
+      color: #888;
+    }
+    .popup-box .close-btn {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      -webkit-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      border-radius: 1000px;
+      background: #d75f70;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      line-height: 190%;
+    }
+    .popup-box .close-btn:hover {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    
+    .transform-in,
+    .transform-out {
+      display: block;
+      -webkit-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+    }
+    
+    .transform-in {
+      -webkit-transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .transform-out {
+      -webkit-transform: translate(-50%, -50%) scale(0.5);
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    input {
+        position: relative;
+        margin: 16px 0;
+        font-size: 28px !important;
+      }
+      
+     .input label {
+        position: absolute;
+        top: 16px;
+        left: 20px;
+        font-weight: 500;
+        color: var(--grey-400);
+        pointer-events: none;
+        transform-origin: top left;
+        transition: transform 200ms;
+      }
+      
+       input{
+        padding: 24px 20px 14px 20px;
+        width: 85%;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        border-radius: 8px;
+        background: #ffffff;
+        transition: background-color 160ms;
+      }
+      
+      input:focus {
+        background: #c7ddfa;
+      }
+      
+      .input-active label {
+        transform: scale(0.7, 0.7) translate(0, -10px);
+      }
+</style>
+<script defer src="src/js/face-api.min.js"></script>
+<body>
+    
+    <div class="center">
+        <center>
+        <h1>กรุณาแสดงหน้าของคุณสักครู่</h1>
+        <!--<button id="start-camera" class="btn green">เริ่มถ่ายรูป</button>-->
+        <!--<button id="click-photo" class="btn green">ตกลง</button>-->
+        <!--<button id="save-photo" class="btn green">บันทึก</button>-->
+        <video id="video" width="300" height="400" style="position:relative;" autoplay></video>
+        <canvas id="canvas" style="position: relative;" width="300px" height="400"></canvas>
+        <!--<a href="index.html"><button class="btn backbtn" >ย้อนกลับ</button></a>-->
+      </div>
+    </center>
+   
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBGHYVjtQNRZIvb0rhUeV6g0ByVAGmidmQ",
+            authDomain: "smartdrop-itlp2022.firebaseapp.com",
+            databaseURL: "https://smartdrop-itlp2022-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "smartdrop-itlp2022",
+            storageBucket: "smartdrop-itlp2022.appspot.com",
+            messagingSenderId: "68583609225",
+            appId: "1:68583609225:web:c14789335702c55eb60758",
+            measurementId: "G-88E68YDK6M"
+          };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import {getDatabase, ref, set, get, child, update, remove} from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
+        const db = getDatabase();
+
+        import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } 
+        from "https://www.gstatic.com/firebasejs/9.6.3/firebase-storage.js";
+
+
+        //variables
+        let camera_button = document.getElementById('start-camera');
+        let video = document.getElementById('video');
+        //let video_og = document.getElementById('video');
+        let click_button = document.getElementById('click-photo');
+        let save_button = document.getElementById('save-photo');
+        let img = document.getElementById('canvas');
+        var name = Date.now()+'.png';
+
+
+        //face detection
+        Promise.all([
+  faceapi.nets.tinyFaceDetector.loadFromUri('src/js/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('src/js/models'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('src/js/models'),
+  faceapi.nets.faceExpressionNet.loadFromUri('src/js/models')
+]).then(startVideo)
+
+function startVideo() {
+  navigator.getUserMedia(
+    { video: {} },
+    stream => video.srcObject = stream,
+    err => console.error(err)
+  )
+}
+
+video.addEventListener('play', () => {
+  const canvas = faceapi.createCanvasFromMedia(video)
+  document.body.append(canvas)
+  const displaySize = { width: video.width, height: video.height }
+  faceapi.matchDimensions(canvas, displaySize)
+  setInterval(async () => {
+    const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
+    const resizedDetections = faceapi.resizeResults(detections, displaySize)
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
+    faceapi.draw.drawDetections(canvas, resizedDetections)
+    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
+    faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+    if(detections == 0){
+      console.log("NO");
+    }else{
+      console.log("Yes");
+      img.getContext('2d').drawImage(video, 0, 0, img.width, img.height);
+      //img.style.display="none";
+      video.style.display = "none";
+      const storage = getStorage();
+       const storageRef = sRef(storage,"Images/"+name);
+       img.toBlob(function(blob){
+        const metaData = {
+          contentType: 'image/png'
+        }
+        const uploadTask = uploadBytesResumable(storageRef, blob, metaData);
+
+        uploadTask.on('state-changed', (snapshot) =>{
+
+        },
+        (error) =>{
+          alert(error);
+        },
+        ()=>{
+          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
+            var number_sw = 1;
+            //console.log(downloadURL);
+            localStorage.setItem("url",downloadURL);
+            localStorage.setItem("canvas",name);
+            const lockerRef = ref(db);
+                get(child(lockerRef,"lockers/box1")).then((box1)=>{
+                    if(box1.exists()){
+                        if(box1.val().status_item== 0){
+                            update(ref(db,"lockers/box1"),{
+                                owner_p: localStorage.getItem("phoneNumber"),
+                                status_sw: number_sw
+                            })
+                            .then(()=>{
+                                localStorage.setItem("box","box1");
+                                localStorage.setItem("num","1");
+                                //localStorage.setItem("phoneNumber",phone.value);
+                                window.location.assign('loading.html');
+                            })
+                            .catch((error)=>{
+                                alert(error);
+                            });
+                        }else{
+                            get(child(lockerRef,"lockers/box2")).then((box2)=>{
+                                if(box2.exists()){
+                                    if(box2.val().status_item==0){
+                                        update(ref(db,"lockers/box2"),{
+                                        owner_p: localStorage.getItem("phoneNumber"),
+                                        status_sw: number_sw
+                                    })
+                                    .then(()=>{
+                                        localStorage.setItem("box","box2");
+                                        localStorage.setItem("num","2");
+                                        //localStorage.setItem("phoneNumber",phone.value);
+                                        window.location.assign('loading.html');
+                                    })
+                                    .catch((error)=>{
+                                        alert(error);
+                                    });
+                                    }else{       
+                                        get(child(lockerRef,"lockers/box3")).then((box3)=>{
+                                            if(box3.exists()){
+                                                if(box3.val().status_item==0){
+                                                    update(ref(db,"lockers/box3"),{
+                                                    owner_p: localStorage.getItem("phoneNumber"),
+                                                    status_sw: number_sw
+                                                })
+                                                .then(()=>{
+                                                    localStorage.setItem("box","box3");
+                                                    localStorage.setItem("num","3");
+                                                    //localStorage.setItem("phoneNumber",phone.value);
+                                                    window.location.assign('loading.html');
+                                                })
+                                                .catch((error)=>{
+                                                    alert(error);
+                                                });
+                                                }else{
+                                                   alert("ตู้เต็มแล้ว!");
+                                                }
+                                            }
+                                        })
+                                        .catch((error)=>{
+                                            alert("มีปัญหา"+error);
+                                        });
+                                    }
+                                }
+                            })
+                            .catch((error)=>{
+                                alert("มีปัญหา"+error);
+                            });
+                        }
+                    }
+                })
+                .catch((error)=>{
+                    alert("มีปัญหา"+error);
+                });
+            //console.log(localStorage.getItem("url"));
+          })
+        }
+        ); 
+        });
+    }
+  }, 1500)
+})
+
+
+
+
+        //set hiden
+        /*click_button.style.display = "none";
+        save_button.style.display = "none";
+        canvas.style.display = "none";
+        video.style.display = "none";*/
+
+        //open Camera
+/*camera_button.addEventListener('click', async function() {
+   	let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+	video.srcObject = stream;
+    save_button.style.display = "none";
+    camera_button.style.display = "none";
+    canvas.style.display = "none";
+    click_button.style.display = "inline";
+    video.style.display="block";
+});
+
+    //take camera
+click_button.addEventListener('click', function() {
+   	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+    let image_data_url = canvas.toDataURL();
+   	// data url of the image
+   	console.log(image_data_url);
+    camera_button.style.display = "inline";
+    save_button.style.display = "inline";
+    video.style.display="none";
+    canvas.style.display = "block";
+    click_button.style.display="none";
+    camera_button.innerHTML = "เริ่มถ่ายรูปใหม่";
+});
+    //save photo
+save_button.addEventListener('click', function() {
+       const storage = getStorage();
+       const storageRef = sRef(storage,"Images/"+name);
+       canvas.toBlob(function(blob){
+        const metaData = {
+          contentType: 'image/png'
+        }
+        const uploadTask = uploadBytesResumable(storageRef, blob, metaData);
+        localStorage.setItem("canvas",name);
+        window.location.assign('loading.html');
+        }); 
+   	// data url of the image
+});*/
+        
+        
+      </script>
+      <script>
+          
+      </script>
+      <script src="js/bootstrap.js"></script>
+</body>
+</html>

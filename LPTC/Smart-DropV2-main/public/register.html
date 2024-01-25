@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | Smart Drop</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.3/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.3/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.3/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <!--<link rel="stylesheet" href="./style/profile.css">-->
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      * {
+          box-sizing: border-box;
+          font-family: 'Kanit', sans-serif !important;
+        }
+          body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #e0e0e0;
+            overflow: hidden;
+            font-size: 14px;
+            font-family: 'Kanit', sans-serif !important;
+          }
+          
+          h3 {
+            margin: 10px 0;
+          }
+          
+          h6 {
+            margin: 5px 0;
+            text-transform: uppercase;
+          }
+          
+          p {
+            font-size: 14px;
+            line-height: 21px;
+          }
+          
+          .card-container {
+            background-image: linear-gradient(to top right, #fdbb76, #f0dca7);
+            border-radius: 25px;
+            box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+            color: #444446;
+            padding: 30px 0 0;
+            position: relative;
+            max-width: 100%;
+            text-align: center;
+            margin: 20px 20px 20px 1px;
+            overflow: hidden;
+          } @media screen and (max-height: 500px) {
+            .card-container {
+              transition: transform 0.5s;
+              transform: translate(0%, -5%) scale(0.8);
+            }
+          }
+          
+          .card-container .pro {
+            color: #231E39;
+            background-color: #FEBB0B;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 7px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+          }
+          
+          .card-container img {
+            padding: 7px;
+            height: 150px;
+            width: 150px;
+          }
+          
+          button.primary {
+            background-color: #293554;
+            border: 0px solid #293554;
+            border-radius: 3px;
+            color: #fff;
+            font-family: Montserrat, sans-serif;
+            font-weight: 500;
+            padding: 10px 25px;
+            margin: 20px;
+          }
+          button.primary.red {
+            background-color: #aa3838 !important;
+          }
+
+          button.primary.green{
+            background-color: #2e773a !important;
+          }
+
+          button.primary.yellow{
+            background-color: #293554 !important;
+          }
+          button.primary.ghost {
+            background-color: transparent;
+            color: #293554;
+          }
+          
+          .skills {
+            background-color: #ffffff;
+            text-align: left;
+            padding: 15px;
+          }
+          
+          .skills ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .skills ul li {
+            border: 1px solid #2D2747;
+            border-radius: 2px;
+            display: inline-block;
+            font-size: 12px;
+            margin: 0 7px 7px 0;
+            padding: 7px;
+          }
+
+          .card-container input {
+            position: relative;
+            margin: 16px 0;
+            font-size: 16px;
+          }
+          
+          .card-container .input label {
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            font-weight: 500;
+            color: var(--grey-400);
+            pointer-events: none;
+            transform-origin: top left;
+            transition: transform 200ms;
+          }
+          
+          .card-container input{
+            padding: 24px 20px 14px 20px;
+            width: 85%;
+            outline: none;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+            background: rgb(255, 255, 255);
+            transition: background-color 160ms;
+          }
+          
+          .card-container input:focus {
+            background: rgba(235, 235, 235, 0.582);
+          }
+          
+          .card-container .input-active label {
+            transform: scale(0.7, 0.7) translate(0, -10px);
+          }
+          
+        </style>
+  </head>
+  <body>
+    <br>
+    <div class="card-container">
+      <div>
+        <img id ="photoHolder" src="./src/img/avatar.png" alt="Profile picture">
+        <!--https://www.visualpharm.com/free-icon-->
+      </div>
+          
+              <h1 style="margin-top: -20px">สมัครสมาชิก</h1>
+              <label></label>
+                <input type="tel" id="phone" placeholder="เบอร์โทรศัพท์ของคุณ"class="form-control"required>
+                <label></label>
+                <input type="email" id="email"placeholder="อีเมลของคุณ" class="form-control"required>
+                <label></label>
+                <input type="text" id="firstname"placeholder="ชื่อของคุณ"class="form-control"required>
+                <label></label>
+                <input type="text" id="lastname"placeholder="นามสกุลของคุณ"class="form-control"required><br>
+                <div class="d-grid gap-2 col-6 mx-auto ">
+                  <button class="primary green" id="register">สมัคร</button>
+                  <a href="index.html"><button class="primary yellow">ย้อนกลับ</button></a>
+                </div>
+          
+        </div>
+      </div>
+
+      <!--- Input phone 
+      <div class="card">
+        <div class="card-body">
+          
+          <h1>กรุณากรอกเบอร์โทรศัพท์ของผู้รับ</h1>
+          <input type="tel" id="phonein" placeholder="กรอกเบอร์โทรศัพท์"class="form-control"required><br>
+          <div class="d-grid gap-2 col-6 mx-auto ">
+            <input type="text" id="test">
+            <button class="btn btn-success"id="accept">ยืนยัน</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    --->
+
+
+
+    <!--- Import + configuration --->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBGHYVjtQNRZIvb0rhUeV6g0ByVAGmidmQ",
+        authDomain: "smartdrop-itlp2022.firebaseapp.com",
+        databaseURL: "https://smartdrop-itlp2022-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "smartdrop-itlp2022",
+        storageBucket: "smartdrop-itlp2022.appspot.com",
+        messagingSenderId: "68583609225",
+        appId: "1:68583609225:web:c14789335702c55eb60758",
+        measurementId: "G-88E68YDK6M"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      import {getDatabase, ref, set, get, child, update, remove} from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
+      const db = getDatabase();
+      
+
+      // References
+      var phonebox = document.getElementById("phone");
+      var emailbox = document.getElementById("email");
+      var firstnamebox = document.getElementById("firstname");
+      var lastnamebox = document.getElementById("lastname");
+      var registerbtn = document.getElementById("register");
+
+
+      var phoneinbox = document.getElementById("phonein");
+      var acceptbtn = document.getElementById("accept");
+      var test = document.getElementById("test");
+
+      // Insert
+      function InsData(){
+        if(phonebox.value != "" && firstnamebox.value != "" && lastnamebox.value != "" && emailbox.value != ""){
+          const dbRef = ref(db);
+          get(child(dbRef,"users/"+phonebox.value)).then((snapshot)=>{
+            if(snapshot.exists()){
+              alert("เบอร์นี้ถูกใช้แล้ว!");
+            }else{
+              set(ref(db, "users/"+phonebox.value),{
+              email: emailbox.value,
+              firstname: firstnamebox.value,
+              lastname: lastnamebox.value
+              })
+              .then(()=>{
+                alert("สมัครสำเร็จ!");
+                //localStorage.setItem("phone", phonebox.value);
+                window.location.assign("./index.html");
+              })
+              .catch((error)=>{
+                alert("มีปัญหา!"+error);
+              });
+            }
+            })
+          .catch((error)=>{
+            alert("มีปัญหา!"+error);
+            location.reload();
+          });
+
+        }else{
+          alert("กรอกข้อมูลให้ครบก่อน!");
+        }
+      }
+
+      /** Select
+      function SelData(){
+        const dbRef = ref(db);
+
+        get(child(dbRef,"users/"+phoneinbox.value)).then((snapshot)=>{
+            if(snapshot.exists()){
+              test.value = snapshot.val().firstname;
+            }else{
+              alert("ไม่มีข้อมูล!");
+            }
+          })
+          .catch((error)=>{
+            alert("มีปัญหา!"+error);
+            location.reload();
+          });
+      }**/
+
+      //Events button
+      registerbtn.addEventListener('click',InsData);
+      //acceptbtn.addEventListener('click', SelData);
+
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
