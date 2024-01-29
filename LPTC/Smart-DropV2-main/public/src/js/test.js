@@ -30,7 +30,7 @@ webpackJsonp([2], {
         for (var o, s, l = 0, c = []; l < n.length; l++) s = n[l], r[s] && c.push(r[s][0]), r[s] = 0;
         for (o in a) Object.prototype.hasOwnProperty.call(a, o) && (e[o] = a[o]);
         for (t && t(n, a, i); c.length;) c.shift()()
-    };
+    }; ะ
     var n = {},
         r = {
             3: 0
