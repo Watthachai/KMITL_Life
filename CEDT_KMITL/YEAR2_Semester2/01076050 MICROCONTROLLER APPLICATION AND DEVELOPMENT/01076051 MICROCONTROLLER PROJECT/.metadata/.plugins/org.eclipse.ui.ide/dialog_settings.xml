@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/itswatthachai/Downloads/767_SPI_ILI9341_2-1"/>
 			<item value="/Users/itswatthachai/KMITL_Life/CEDT_KMITL/YEAR2_Semester2/01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT/01076051 MICROCONTROLLER PROJECT"/>
 			<item value="/Users/itswatthachai/KMITL_Life/CEDT_KMITL/YEAR2_Semester2/01076050 MICROCONTROLLER APPLICATION AND DEVELOPMENT/01076051 MICROCONTROLLER PROJECT/ponggame_stm32f767-main"/>
 		</list>

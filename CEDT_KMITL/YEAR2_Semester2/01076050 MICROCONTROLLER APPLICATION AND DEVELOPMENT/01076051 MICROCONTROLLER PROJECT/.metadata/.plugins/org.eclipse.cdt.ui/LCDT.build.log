@@ -1,0 +1,7 @@
+02:29:14 **** Incremental Build of configuration Debug for project LCDT ****
+make -j7 all 
+Core/Src/main.d:1: *** multiple target patterns.  Stop.
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+
+02:29:14 Build Failed. 1 errors, 0 warnings. (took 147ms)
+
