@@ -70,6 +70,8 @@ class SlotMachine:
             # Otherwise, spin normally
             return [random.choices(reel, k=1)[0] for reel in self.reels]
 
+        
+    
     def print_loop_layout(self):
         result = self.spin()
         
@@ -90,6 +92,26 @@ class SlotMachine:
                 '\t|_________________________________________|/')
         
         print(layout)
+        
+    def change_line(self):
+        layout_2 = ('\n\t   __________________________________________\n'
+                '\t  /                                         /|\n'
+                '\t /_________________________________________/ |\n'
+                '\t|                                         |  |\n'
+                '\t| STRAWBERRY x2  PLUM   x3   RASPBERRY x5 |  |\n'
+                '\t| ORANGE     x8  BANANA x10  SEVENS   x15 |  |\n'
+                '\t|                                         |  |\n'
+                '\t|   -----------------------------------   |  |\n'
+                f'\t|  |                           |  |  |\n'
+                f'\t|  |                           |  |  |\n'
+                '\t|   -----------------------------------   |  |\n'
+                '\t|                                         |  |\n'
+                f'\t|   TOAL BET {cash.bet}               CREDIT {cash.credit} \n'
+                '\t|                                         |  |\n'
+                '\t|                2 line               | /\n'
+                '\t|_________________________________________|/')
+        
+        print(layout_2)
 
     def play(self, cash):
         clear()
@@ -150,6 +172,7 @@ slot_three = random.choices(symbols, weights=probabilities, k=100)
 slot_machine = SlotMachine(slot_one, slot_two, slot_three)
 cash = Cash()
 
+
 def welcome():
     welcome = ['\n\n\t #######    #######    #######',
                '\t########   ########   ########',
@@ -196,9 +219,13 @@ if __name__ == '__main__':
     layout()
     while True:
         """print(f"\nCurrent Bet: {cash.bet}, Current Credit: {cash.credit}")"""
-        again = input("\nPress 'q' to quit\n      'b' to change bet \n      'a' to add money \nPress other key to spin: ")
+        again = input("\nPress 'q' to quit\n'b' to change bet \n'a' to add money\n'c' change line\n Press other key to spin: ")
         if again == 'q':
             break
+        elif again == 'c':
+            change_line()
+            clear()
+            layout()
         elif again == 'b':
             cash.change_bet()
             clear()
@@ -213,26 +240,26 @@ if __name__ == '__main__':
         else:
             if not cash.charge():
                 clear()
-                """for i in range(6):
+                for i in range(6):
                     slot_machine.print_loop_layout()
                     time.sleep(0.1)
                     clear()
                 for i in range(4):
                     slot_machine.print_loop_layout()
-                    time.sleep(0.3)
+                    time.sleep(0.2)
                     clear()
                 for i in range(3):
                     slot_machine.print_loop_layout()
-                    time.sleep(0.5)
+                    time.sleep(0.3)
                     clear()
                 for i in range(1):
                     slot_machine.print_loop_layout()
-                    time.sleep(0.7)
+                    time.sleep(0.3)
                     clear()
                 for i in range(2):
                     slot_machine.print_loop_layout()
-                    time.sleep(0.8)
-                    clear()"""        
+                    time.sleep(0.4)
+                    clear()    
                 slot_machine.play(cash)
                 
     time.sleep(1)

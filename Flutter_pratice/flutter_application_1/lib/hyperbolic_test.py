@@ -63,7 +63,7 @@ model_adam.compile(loss='binary_crossentropy',
               optimizer=optimizer_adam,
               metrics=['accuracy'])
 
-epochs = 4
+epochs = 200
 batch_size = 1
 
 history_adam = model_adam.fit(training_data, target_data, epochs=epochs, batch_size=batch_size)
