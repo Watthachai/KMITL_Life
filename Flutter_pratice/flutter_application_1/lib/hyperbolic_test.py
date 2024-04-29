@@ -24,7 +24,7 @@ print(target_data.shape)
 #--------------------------------------------------------------------------------------------------------------------------
 # Train model #1
 #--------------------------------------------------------------------------------------------------------------------------
-"""model_sgd = Sequential()
+model_sgd = Sequential()
 model_sgd.add(Dense(32, input_shape=(2,), activation='sigmoid'))
 model_sgd.add(Dense(1, activation='sigmoid'))
 
@@ -48,12 +48,12 @@ model_sgd.summary()
 plt.plot(history_sgd.history['loss'])
 plt.ylabel('loss')
 plt.xlabel('epochs')
-plt.show()"""
+plt.show()
 
 #--------------------------------------------------------------------------------------------------------------------------
 # Train model #2
 #--------------------------------------------------------------------------------------------------------------------------
-model_adam = Sequential()
+"""model_adam = Sequential()
 model_adam.add(Dense(32, input_shape=(2,), activation='sigmoid'))
 model_adam.add(Dense(1, activation='sigmoid'))
 
@@ -77,3 +77,4 @@ plt.ylabel('loss')
 plt.xlabel('epochs')
 plt.show()
 model_adam.summary()
+"""
