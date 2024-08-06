@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  api-dev:
+    build:
+      context: ./api
+    environment:
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - DB_HOST=db-dev
+      - DB_NAME=users
+    ports:
+      - "8081:5000"
+    depends_on:
+      - db-dev
+
+  api-test:
+    build:
+      context: ./api
+    environment:
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - DB_HOST=db-test
+      - DB_NAME=users
+    ports:
+      - "8082:5000"
+    depends_on:
+      - db-test
+
+  db-dev:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: users
+    volumes:
+      - db-data:/var/lib/mysql
+
+  db-test:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: users
+    volumes:
+      - db-test-data:/var/lib/mysql
+
+volumes:
+  db-data:
+  db-test-data:
