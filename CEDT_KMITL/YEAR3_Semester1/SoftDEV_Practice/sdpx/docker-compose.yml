@@ -2,51 +2,63 @@ version: '3.8'
 
 services:
   api-dev:
-    image: sdpx/api
+    build: ./api
+    image: sdpx/api:dev
     ports:
-      - "8081:8081"
+      - "8081:5000"
     environment:
       - FLASK_ENV=development
       - DB_HOST=db-dev
       - DB_USER=admin
       - DB_PASSWORD=db4dev$
       - DB_NAME=users
+    networks:
+      - dev-network
     depends_on:
       - db-dev
 
   api-test:
-    image: sdpx/api
+    build: ./api
+    image: sdpx/api:test
     ports:
-      - "8082:8082"
+      - "8082:5000"
     environment:
       - FLASK_ENV=development
       - DB_HOST=db-test
       - DB_USER=admin
       - DB_PASSWORD=db4test$
       - DB_NAME=users
+    networks:
+      - test-network
     depends_on:
       - db-test
 
   db-dev:
-    image: sdpx/db
+    build:
+      context: ./db
     environment:
       MYSQL_ROOT_PASSWORD: db4dev$
       MYSQL_DATABASE: users
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: db4dev$
     volumes:
-      - db-dev-data:/var/lib/mysql
+      - db-data:/var/lib/mysql
+    networks:
+      - dev-network
 
   db-test:
-    image: sdpx/db
+    build:
+      context: ./db
     environment:
       MYSQL_ROOT_PASSWORD: db4test$
       MYSQL_DATABASE: users
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: db4test$
     volumes:
       - db-test-data:/var/lib/mysql
+    networks:
+      - test-network
 
 volumes:
-  db-dev-data:
+  db-data:
   db-test-data:
+
+networks:
+  dev-network:
+  test-network:

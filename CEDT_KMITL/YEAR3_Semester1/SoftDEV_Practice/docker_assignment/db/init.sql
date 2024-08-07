@@ -1,6 +1,0 @@
-CREATE TABLE users (
-    uid INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    age INT NOT NULL,
-    PRIMARY KEY (uid)
-);
