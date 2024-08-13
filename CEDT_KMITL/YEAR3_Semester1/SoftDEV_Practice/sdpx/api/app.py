@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, abort
 import mysql.connector
 from mysql.connector import errors
 import logging
-import os
 
 app = Flask(__name__)
 
@@ -27,8 +26,12 @@ def users_dev():
                 conx.close()
                 return jsonify(users)
             except errors.InterfaceError as e:
-                app.logger.error(f"Database connection failed: {e}")
-                return jsonify({"error": "Database connection failed", "message": str(e)}), 500
+                if "Unknown MySQL server host" in str(e):
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": "Unknown MySQL server host"}), 500
+                else:
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": str(e)}), 500
             except errors.DatabaseError as e:
                 app.logger.error(f"Database error: {e}")
                 return jsonify({"error": "Database error", "message": str(e)}), 500
@@ -51,16 +54,20 @@ def users_dev():
                 conx.close()
                 return jsonify({"message": "User added successfully"}), 201
             except errors.InterfaceError as e:
-                app.logger.error(f"Database connection failed: {e}")
-                return jsonify({"error": "Database connection failed", "message": str(e)}), 500
+                if "Unknown MySQL server host" in str(e):
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": "Unknown MySQL server host"}), 500
+                else:
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": str(e)}), 500
             except errors.DatabaseError as e:
                 app.logger.error(f"Database error: {e}")
                 return jsonify({"error": "Database error", "message": str(e)}), 500
             except Exception as e:
                 app.logger.error(f"An unexpected error occurred: {e}")
                 return jsonify({"error": "An unexpected error occurred", "message": str(e)}), 500
-    else:
-        return abort(403)  # Forbidden access
+        else:
+            return abort(403)  # Forbidden access
 
 @app.route('/api-test', methods=['GET', 'POST'])
 def users_test():
@@ -76,8 +83,12 @@ def users_test():
                 conx.close()
                 return jsonify(users)
             except errors.InterfaceError as e:
-                app.logger.error(f"Database connection failed: {e}")
-                return jsonify({"error": "Database connection failed", "message": str(e)}), 500
+                if "Unknown MySQL server host" in str(e):
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": "Unknown MySQL server host"}), 500
+                else:
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": str(e)}), 500
             except errors.DatabaseError as e:
                 app.logger.error(f"Database error: {e}")
                 return jsonify({"error": "Database error", "message": str(e)}), 500
@@ -98,18 +109,21 @@ def users_test():
                 conx.commit()
                 cursor.close()
                 conx.close()
-                return jsonify({"message": "User added successfully"}), 201
             except errors.InterfaceError as e:
-                app.logger.error(f"Database connection failed: {e}")
-                return jsonify({"error": "Database connection failed", "message": str(e)}), 500
+                if "Unknown MySQL server host" in str(e):
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": "Unknown MySQL server host"}), 500
+                else:
+                    app.logger.error(f"Database connection failed: {e}")
+                    return jsonify({"error": "Database connection failed", "message": str(e)}), 500
             except errors.DatabaseError as e:
                 app.logger.error(f"Database error: {e}")
                 return jsonify({"error": "Database error", "message": str(e)}), 500
             except Exception as e:
                 app.logger.error(f"An unexpected error occurred: {e}")
                 return jsonify({"error": "An unexpected error occurred", "message": str(e)}), 500
-    else:
-        return abort(403)  # Forbidden access
+        else:
+            return abort(403)  # Forbidden access
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
