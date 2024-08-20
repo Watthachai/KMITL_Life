@@ -58,7 +58,7 @@ def api_dev():
             elif request.method == 'PUT':
                 # New code for PUT
                 user_data = request.json
-                user_id = user_data.get('id')
+                user_uid = user_data.get('uid')
                 name = user_data.get('name')
                 age = user_data.get('age')
 
@@ -66,7 +66,7 @@ def api_dev():
                 cursor = conx.cursor()
 
                 # Update query
-                cursor.execute("UPDATE users SET name = %s, age = %s WHERE id = %s", (name, age, user_id))
+                cursor.execute("UPDATE users SET name = %s, age = %s WHERE uid = %s", (name, age, user_uid))
                 conx.commit()
 
                 # Check if any row was updated
@@ -80,12 +80,12 @@ def api_dev():
             elif request.method == 'DELETE':
                 # Existing code for DELETE
                 user_data = request.json
-                user_id = user_data.get('id')
+                user_uid = user_data.get('uid')
 
                 conx = mysql.connector.connect(user='root', password='db4dev$', host='db-dev', database='users')
                 cursor = conx.cursor()
 
-                cursor.execute("DELETE FROM users WHERE id = %s", (user_id,))
+                cursor.execute("DELETE FROM users WHERE uid = %s", (user_uid,))
                 conx.commit()
 
                 if cursor.rowcount == 0:
@@ -96,7 +96,7 @@ def api_dev():
                 return jsonify({"message": "User deleted successfully"}), 200
 
             else:
-                return abort(403)  # Forbidden access
+                return abort(403)  # Forbuidden access
 
         except Exception as e:
             return handle_db_error(e)
@@ -132,7 +132,7 @@ def api_test():
             elif request.method == 'PUT':
                 # New code for PUT
                 user_data = request.json
-                user_id = user_data.get('id')
+                user_uid = user_data.get('uid')
                 name = user_data.get('name')
                 age = user_data.get('age')
 
@@ -140,7 +140,7 @@ def api_test():
                 cursor = conx.cursor()
 
                 # Update query
-                cursor.execute("UPDATE users SET name = %s, age = %s WHERE id = %s", (name, age, user_id))
+                cursor.execute("UPDATE users SET name = %s, age = %s WHERE uid = %s", (name, age, user_uid))
                 conx.commit()
 
                 if cursor.rowcount == 0:
@@ -153,12 +153,12 @@ def api_test():
             elif request.method == 'DELETE':
                 # Existing code for DELETE
                 user_data = request.json
-                user_id = user_data.get('id')
+                user_uid = user_data.get('uid')
 
                 conx = mysql.connector.connect(user='root', password='db4test$', host='db-test', database='users')
                 cursor = conx.cursor()
 
-                cursor.execute("DELETE FROM users WHERE id = %s", (user_id,))
+                cursor.execute("DELETE FROM users WHERE uid = %s", (user_uid,))
                 conx.commit()
 
                 if cursor.rowcount == 0:
@@ -169,7 +169,7 @@ def api_test():
                 return jsonify({"message": "User deleted successfully"}), 200
 
             else:
-                return abort(403)  # Forbidden access
+                return abort(403)  # Forbuidden access
 
         except Exception as e:
             return handle_db_error(e)
