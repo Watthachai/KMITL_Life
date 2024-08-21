@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  api-dev:
+    build: ./api
+    image: sdpx/api:dev
+    ports:
+      - "8081:5000"
+    environment:
+      - FLASK_ENV=development
+      - DB_HOST=db-dev
+      - DB_USER=admin
+      - DB_PASSWORD=db4dev$
+      - DB_NAME=users
+    networks:
+      - dev-network
+    depends_on:
+      - db-dev
+
+  db-dev:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: db4dev$
+      MYSQL_DATABASE: users
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - dev-network
+
+volumes:
+  db-data:
+
+networks:
+  dev-network:
