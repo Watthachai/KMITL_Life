@@ -35,9 +35,23 @@ class DetailedLSIModel:
         return query_vec
      
     def step5_calculate_similarity(self, query_vec, doc_matrix):
+        detailed_calcs = []
         doc_norms = np.linalg.norm(doc_matrix, axis=1)
         query_norm = np.linalg.norm(query_vec)
-        return np.dot(doc_matrix, query_vec.T).flatten() / (doc_norms * query_norm)
+        similarities = np.dot(doc_matrix, query_vec.T).flatten() / (doc_norms * query_norm)
+        
+        for i, doc_vec in enumerate(doc_matrix):
+            dot_product = np.dot(doc_vec, query_vec.T).flatten()[0]
+            detailed_calcs.append({
+                'Document': f'Document {i+1}',
+                'Doc Vector': doc_vec,
+                'Dot Product': dot_product,
+                'Doc Norm': doc_norms[i],
+                'Query Norm': query_norm,
+                'Similarity': similarities[i]
+            })
+        
+        return similarities, detailed_calcs
 
     def step6_rank_documents(self, similarities, documents):
         results = [{'Document_ID': f'Document {i+1}', 'Content': doc, 'Similarity': sim} for i, (doc, sim) in enumerate(zip(documents, similarities))]
@@ -87,7 +101,7 @@ st.dataframe(query_df)
 st.subheader("5. Document Similarity Calculation")
 doc_lsi = np.dot(tfidf_matrix, VT.T @ np.diag(1/S))
 query_lsi = np.dot(query_vec, VT.T @ np.diag(1/S))
-similarities = lsi_model.step5_calculate_similarity(query_lsi, doc_lsi)
+similarities, detailed_calcs = lsi_model.step5_calculate_similarity(query_lsi, doc_lsi)
 similarity_df = pd.DataFrame({"Document": [f'Document {i+1}' for i in range(len(documents))], "Similarity": similarities})
 st.dataframe(similarity_df)
 
@@ -104,3 +118,13 @@ for idx, row in rankings.head().iterrows():
     st.write(f"Tiger count: {tiger_count}, Bird count: {bird_count}")
     st.write("\n")
 
+st.subheader("Detailed Cosine Similarity Calculations")
+for calc in detailed_calcs:
+    st.write(f"**Document: {calc['Document']}**")
+    st.write(f"Document Vector: {calc['Doc Vector']}")
+    st.write(f"Dot Product with Query: {calc['Dot Product']:.4f}")
+    st.write(f"Document Norm: {calc['Doc Norm']:.4f}")
+    st.write(f"Query Norm: {calc['Query Norm']:.4f}")
+    st.write(f"Cosine Similarity = {calc['Dot Product']:.4f} / ({calc['Doc Norm']:.4f} * {calc['Query Norm']:.4f})")
+    st.write(f"                  = {calc['Similarity']:.4f}")
+    st.write("\n")
